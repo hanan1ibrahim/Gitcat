@@ -10,5 +10,4 @@ target 'Gitcat' do
    pod 'Kingfisher', '~> 7.0'
    pod 'IQKeyboardManagerSwift'
    pod 'lottie-ios'
-   pod 'MBProgressHUD', '~> 1.2.0'
 end

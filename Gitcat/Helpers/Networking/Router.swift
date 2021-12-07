@@ -10,13 +10,13 @@ import Alamofire
 
 enum Router {
     case usersListAPIlink
-    case gitPublicRepositories
+    case repositoryAPIlink(String)
     
     var baseURL: String {
         switch self {
         case .usersListAPIlink:
             return "https://api.github.com"
-        case .gitPublicRepositories:
+        case .repositoryAPIlink:
             return "https://api.github.com"
         }
     }
@@ -25,7 +25,7 @@ enum Router {
         switch self {
         case .usersListAPIlink:
             return "/users"
-        case .gitPublicRepositories:
+        case .repositoryAPIlink:
             return "/search/repositories"
         }
     }
@@ -34,7 +34,7 @@ enum Router {
         switch self {
         case .usersListAPIlink:
             return .get
-        case .gitPublicRepositories:
+        case .repositoryAPIlink:
             return .get
         }
     }
@@ -43,8 +43,8 @@ enum Router {
         switch self {
         case .usersListAPIlink:
             return nil
-        case .gitPublicRepositories:
-            return nil
+        case .repositoryAPIlink(let query):
+            return ["per_page": "30", "sort": "stars", "order": "desc", "q": query]
         }
     }
 }
