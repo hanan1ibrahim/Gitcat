@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  Gitcat
 //
-//  Created by Ali Fayed on 07/12/2021.
+//  Created by Hanan Ibrahim on 07/12/2021.
 //
 
 import UIKit
