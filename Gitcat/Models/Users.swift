@@ -1,17 +1,17 @@
 //
-//  UsersModel.swift
+//  Users.swift
 //  Gitcat
 //
-//  Created by Ali Fayed on 07/12/2021.
+//  Created by Hanan Ibrahim on 07/12/2021.
 //
 
 import Foundation
-//struct UsersModel: Decodable {
+//struct Users: Decodable {
 //    let login: String
 //    let html_url: String
 //    let avatar_url: String
 //}
-struct UsersModel {
+struct Users {
     let userName: String
     let userURL: String
     let userAvatar: String
@@ -22,7 +22,7 @@ struct UsersModel {
         case userAvatar = "avatar_url"
     }
 }
-extension UsersModel: Decodable {
+extension Users: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: UsersCodingKeys.self)
         userName = try container.decode(String.self, forKey: .userName)

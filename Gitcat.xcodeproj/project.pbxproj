@@ -15,7 +15,8 @@
 		EA5F6FB0275FBE1500DAAAE8 /* Gitcat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA5F6FAE275FBE1500DAAAE8 /* Gitcat.xcdatamodeld */; };
 		EA5F6FB2275FBE1600DAAAE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA5F6FB1275FBE1600DAAAE8 /* Assets.xcassets */; };
 		EA5F6FB5275FBE1600DAAAE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5F6FB3275FBE1600DAAAE8 /* LaunchScreen.storyboard */; };
-		EA5F6FC3275FBFFF00DAAAE8 /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F6FC2275FBFFF00DAAAE8 /* UsersModel.swift */; };
+		EA5F6FC9275FC68D00DAAAE8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F6FC8275FC68D00DAAAE8 /* Router.swift */; };
+		EA5F6FCB275FCE3E00DAAAE8 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F6FCA275FCE3E00DAAAE8 /* Users.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +32,8 @@
 		EA5F6FB1275FBE1600DAAAE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA5F6FB4275FBE1600DAAAE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA5F6FB6275FBE1600DAAAE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA5F6FC2275FBFFF00DAAAE8 /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
+		EA5F6FC8275FC68D00DAAAE8 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		EA5F6FCA275FCE3E00DAAAE8 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 		EA5F6FC0275FBEF000DAAAE8 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				EA5F6FC5275FC5BC00DAAAE8 /* Networking */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -148,9 +151,17 @@
 		EA5F6FC4275FC02800DAAAE8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EA5F6FC2275FBFFF00DAAAE8 /* UsersModel.swift */,
+				EA5F6FCA275FCE3E00DAAAE8 /* Users.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		EA5F6FC5275FC5BC00DAAAE8 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EA5F6FC8275FC68D00DAAAE8 /* Router.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,8 +280,9 @@
 			files = (
 				EA5F6FAA275FBE1500DAAAE8 /* UsersViewController.swift in Sources */,
 				EA5F6FA6275FBE1500DAAAE8 /* AppDelegate.swift in Sources */,
+				EA5F6FC9275FC68D00DAAAE8 /* Router.swift in Sources */,
 				EA5F6FA8275FBE1500DAAAE8 /* SceneDelegate.swift in Sources */,
-				EA5F6FC3275FBFFF00DAAAE8 /* UsersModel.swift in Sources */,
+				EA5F6FCB275FCE3E00DAAAE8 /* Users.swift in Sources */,
 				EA5F6FB0275FBE1500DAAAE8 /* Gitcat.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
