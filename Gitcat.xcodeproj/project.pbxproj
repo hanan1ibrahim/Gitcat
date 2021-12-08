@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		639C59759C32D621A7A8F76C /* Pods_Gitcat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D01CE35D809FC6F25FF5E70 /* Pods_Gitcat.framework */; };
 		EA5A251F2761283B00DD4F79 /* UIVC+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A251E2761283B00DD4F79 /* UIVC+Ext.swift */; };
+		EA5A25222761289100DD4F79 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A25212761289100DD4F79 /* BookmarksViewController.swift */; };
 		EA5F6FA6275FBE1500DAAAE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F6FA5275FBE1500DAAAE8 /* AppDelegate.swift */; };
 		EA5F6FA8275FBE1500DAAAE8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F6FA7275FBE1500DAAAE8 /* SceneDelegate.swift */; };
 		EA5F6FAA275FBE1500DAAAE8 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F6FA9275FBE1500DAAAE8 /* UsersViewController.swift */; };
@@ -33,6 +34,7 @@
 		7D01CE35D809FC6F25FF5E70 /* Pods_Gitcat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gitcat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4208D98E0B6A7435CFB3492 /* Pods-Gitcat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gitcat.release.xcconfig"; path = "Target Support Files/Pods-Gitcat/Pods-Gitcat.release.xcconfig"; sourceTree = "<group>"; };
 		EA5A251E2761283B00DD4F79 /* UIVC+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVC+Ext.swift"; sourceTree = "<group>"; };
+		EA5A25212761289100DD4F79 /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		EA5F6FA2275FBE1500DAAAE8 /* Gitcat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gitcat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5F6FA5275FBE1500DAAAE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA5F6FA7275FBE1500DAAAE8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EA5A25202761287A00DD4F79 /* BookmarksView */ = {
+			isa = PBXGroup;
+			children = (
+				EA5A25212761289100DD4F79 /* BookmarksViewController.swift */,
+			);
+			path = BookmarksView;
+			sourceTree = "<group>";
+		};
 		EA5F6F99275FBE1500DAAAE8 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +137,7 @@
 		EA5F6FBD275FBEBE00DAAAE8 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EA5A25202761287A00DD4F79 /* BookmarksView */,
 				EA5F6FDF275FD58D00DAAAE8 /* UsersView */,
 				EA5F6FE0275FD59500DAAAE8 /* ReposView */,
 			);
@@ -339,6 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA5A25222761289100DD4F79 /* BookmarksViewController.swift in Sources */,
 				EA5F6FAA275FBE1500DAAAE8 /* UsersViewController.swift in Sources */,
 				EA5F6FA6275FBE1500DAAAE8 /* AppDelegate.swift in Sources */,
 				EA5F6FD7275FD33C00DAAAE8 /* ImageView+Ext.swift in Sources */,
