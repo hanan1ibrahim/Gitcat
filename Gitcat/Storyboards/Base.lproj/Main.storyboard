@@ -86,10 +86,18 @@
                                 <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljp-8N-JFE">
+                                <rect key="frame" x="183" y="436" width="48" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Oxz-2J-jsg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ljp-8N-JFE" firstAttribute="centerX" secondItem="3ZX-Vf-Ysw" secondAttribute="centerX" id="2e4-BB-fhr"/>
+                            <constraint firstItem="ljp-8N-JFE" firstAttribute="centerY" secondItem="3ZX-Vf-Ysw" secondAttribute="centerY" id="3Pe-jg-dQY"/>
                             <constraint firstItem="Oxz-2J-jsg" firstAttribute="bottom" secondItem="CCO-gs-CCa" secondAttribute="bottom" id="GLD-HW-dvb"/>
                             <constraint firstItem="CCO-gs-CCa" firstAttribute="leading" secondItem="Oxz-2J-jsg" secondAttribute="leading" id="HZn-H6-fbb"/>
                             <constraint firstItem="Oxz-2J-jsg" firstAttribute="trailing" secondItem="CCO-gs-CCa" secondAttribute="trailing" id="awN-Yk-SLc"/>
@@ -98,6 +106,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Users" largeTitleDisplayMode="always" id="L1l-ZL-Cn7"/>
                     <connections>
+                        <outlet property="searchLabel" destination="ljp-8N-JFE" id="qae-t2-lff"/>
                         <outlet property="tableView" destination="CCO-gs-CCa" id="rAS-5b-hzO"/>
                     </connections>
                 </viewController>

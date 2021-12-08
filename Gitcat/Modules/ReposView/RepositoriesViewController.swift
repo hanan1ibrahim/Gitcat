@@ -121,7 +121,7 @@ extension RepositoriesViewController: UITableViewDataSource, UITableViewDelegate
         }
     }
 }
-// MARK:- TableView
+// MARK:- SearchBar
 extension RepositoriesViewController: UISearchBarDelegate {
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         tableView.isHidden = true

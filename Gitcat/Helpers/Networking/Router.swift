@@ -9,7 +9,7 @@
 import Alamofire
 
 enum Router {
-    case usersListAPIlink
+    case usersListAPIlink(String)
     case repositoryAPIlink(String)
     
     var baseURL: String {
@@ -24,7 +24,7 @@ enum Router {
     var path: String {
         switch self {
         case .usersListAPIlink:
-            return "/users"
+            return "/search/users"
         case .repositoryAPIlink:
             return "/search/repositories"
         }
@@ -41,8 +41,8 @@ enum Router {
     
     var parameters: [String: String]? {
         switch self {
-        case .usersListAPIlink:
-            return nil
+        case .usersListAPIlink(let query):
+            return ["per_page": "30" ,"sort": "repositories", "order": "desc", "q": query]
         case .repositoryAPIlink(let query):
             return ["per_page": "30", "sort": "stars", "order": "desc", "q": query]
         }

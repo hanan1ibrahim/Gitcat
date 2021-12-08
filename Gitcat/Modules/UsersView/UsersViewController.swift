@@ -11,17 +11,19 @@ import SafariServices
 
 class UsersViewController: UIViewController {
     //MARK:- IBOutlets
+    @IBOutlet weak var searchLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     //MARK:- Varibles
     let spinner = UIActivityIndicatorView()
     var searchController = UISearchController(searchResultsController: nil)
-    var usersModel = [Users]()
+    var usersModel = [User]()
     //MARK:- LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         loadingIndicator()
-        getUsersList()
+        configureUI()
+        initData()
         setupSearchController(search: searchController)
     }
     //MARK:- Functions
@@ -30,8 +32,14 @@ class UsersViewController: UIViewController {
         spinner.center = view.center
         view.addSubview(spinner)
     }
+    func initData() {
+        getUsersList(query: "Hanan")
+    }
     func configureUI() {
         title = "Users"
+        searchController.searchBar.delegate = self
+        searchLabel.isHidden = true
+        searchLabel.text = "Search For Users"
     }
     func setupTableView() {
         tableView.dataSource = self
@@ -44,14 +52,14 @@ class UsersViewController: UIViewController {
         alert.addAction(action)
         self.present(alert, animated: true)
     }
-    func getUsersList() {
+    func getUsersList(query: String) {
         spinner.startAnimating()
-        let requestURL = Router.usersListAPIlink
-        AF.request(requestURL).responseDecodable(of: [Users].self, completionHandler: { response in
+        let requestURL = Router.usersListAPIlink(query)
+        AF.request(requestURL).responseDecodable(of: Users.self, completionHandler: { response in
                 switch response.result {
                 case .success(_):
                     guard let users = response.value else {return}
-                    self.usersModel = users
+                    self.usersModel = users.items
                     self.tableView.reloadData()
                     self.spinner.stopAnimating()
                 case .failure(let error):
@@ -89,5 +97,49 @@ extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
+    }
+    func tableView( _ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        let identifier = "\(String(describing: index))" as NSString
+        return UIContextMenuConfiguration( identifier: identifier, previewProvider: nil) { [weak self] _ in
+            let bookmarkAction = UIAction(title: "Bookmark", image: UIImage(systemName: "bookmark.fill")) { _ in
+                
+            }
+            let safariAction = UIAction(
+                title: "Open In Safari",
+                image: UIImage(systemName: "link")) { _ in
+                let userURL = self?.usersModel[indexPath.row].userURL
+                let safariVC = SFSafariViewController(url: URL(string: userURL ?? "")!)
+                self?.present(safariVC, animated: true)
+            }
+            
+            let shareAction = UIAction(
+                title: "Share",
+                image: UIImage(systemName: "square.and.arrow.up")) { _ in
+                let image = UIImage(systemName: "bell")
+                let userURL = self?.usersModel[indexPath.row].userURL
+                let sheetVC = UIActivityViewController(activityItems: [image!,userURL!], applicationActivities: nil)
+                self?.present(sheetVC, animated: true)
+            }
+            
+            return UIMenu(title: "", image: nil, children: [safariAction ,bookmarkAction, shareAction])
+        }
+    }
+}
+// MARK:- SearchBar
+extension UsersViewController: UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        tableView.isHidden = true
+        searchLabel.isHidden = false
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let query = searchBar.text, !query.trimmingCharacters(in: .whitespaces).isEmpty else {return}
+        getUsersList(query: query)
+        searchLabel.isHidden = true
+        tableView.isHidden = false
+    }
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        getUsersList(query: "Hanan")
+        tableView.isHidden = false
+        searchLabel.isHidden = true
     }
 }
