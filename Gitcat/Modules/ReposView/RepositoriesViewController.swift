@@ -12,15 +12,19 @@ import SafariServices
 class RepositoriesViewController: UIViewController {
     //MARK:- IBOutlets
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchLabel: UILabel!
     //MARK:- Varibles
     let spinner = UIActivityIndicatorView()
+    var searchController = UISearchController(searchResultsController: nil)
     var repositoriesModel = [Repository]()
     //MARK:- LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         loadingIndicator()
-        getUsersList()
+        initData()
+        setupSearchController(search: searchController)
+        configureUI()
     }
     //MARK:- Functions
     func loadingIndicator() {
@@ -28,8 +32,14 @@ class RepositoriesViewController: UIViewController {
         spinner.center = view.center
         view.addSubview(spinner)
     }
+    func initData() {
+        getReposList(query: "language:Swift")
+    }
     func configureUI() {
         title = "Repositories"
+        searchController.searchBar.delegate = self
+        searchLabel.isHidden = true
+        searchLabel.text = "Search For Repositories"
     }
     func setupTableView() {
         tableView.dataSource = self
@@ -42,21 +52,21 @@ class RepositoriesViewController: UIViewController {
         alert.addAction(action)
         self.present(alert, animated: true)
     }
-    func getUsersList() {
+    func getReposList(query: String) {
         spinner.startAnimating()
-        let requestURL = Router.repositoryAPIlink("language:Swift")
+        let requestURL = Router.repositoryAPIlink(query)
         AF.request(requestURL).responseDecodable(of: Repositories.self, completionHandler: { response in
-                switch response.result {
-                case .success(_):
-                    guard let repository = response.value else {return}
-                    self.repositoriesModel = repository.items
-                    self.tableView.reloadData()
-                    self.spinner.stopAnimating()
-                case .failure(let error):
-                    self.presentAlert(title: "Error", msg: error.localizedDescription, btnTitle: "Ok")
-                }
-            })
-        }
+            switch response.result {
+            case .success(_):
+                guard let repository = response.value else {return}
+                self.repositoriesModel = repository.items
+                self.tableView.reloadData()
+                self.spinner.stopAnimating()
+            case .failure(let error):
+                self.presentAlert(title: "Error", msg: error.localizedDescription, btnTitle: "Ok")
+            }
+        })
+    }
 }
 // MARK:- TableView
 extension RepositoriesViewController: UITableViewDataSource, UITableViewDelegate {
@@ -83,5 +93,49 @@ extension RepositoriesViewController: UITableViewDataSource, UITableViewDelegate
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    func tableView( _ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        let identifier = "\(String(describing: index))" as NSString
+        return UIContextMenuConfiguration( identifier: identifier, previewProvider: nil) { [weak self] _ in
+            let bookmarkAction = UIAction(title: "Bookmark", image: UIImage(systemName: "bookmark.fill")) { _ in
+                
+            }
+            let safariAction = UIAction(
+                title: "Open In Safari",
+                image: UIImage(systemName: "link")) { _ in
+                let repoURL = self?.repositoriesModel[indexPath.row].repositoryURL
+                let safariVC = SFSafariViewController(url: URL(string: repoURL ?? "")!)
+                self?.present(safariVC, animated: true)
+            }
+            
+            let shareAction = UIAction(
+                title: "Share",
+                image: UIImage(systemName: "square.and.arrow.up")) { _ in
+                let image = UIImage(systemName: "bell")
+                let repoURL = self?.repositoriesModel[indexPath.row].repositoryURL
+                let sheetVC = UIActivityViewController(activityItems: [image!,repoURL!], applicationActivities: nil)
+                self?.present(sheetVC, animated: true)
+            }
+            
+            return UIMenu(title: "", image: nil, children: [safariAction ,bookmarkAction, shareAction])
+        }
+    }
+}
+// MARK:- TableView
+extension RepositoriesViewController: UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        tableView.isHidden = true
+        searchLabel.isHidden = false
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let query = searchBar.text, !query.trimmingCharacters(in: .whitespaces).isEmpty else {return}
+        getReposList(query: query)
+        searchLabel.isHidden = true
+        tableView.isHidden = false
+    }
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        getReposList(query: "language:Swift")
+        tableView.isHidden = false
+        searchLabel.isHidden = true
     }
 }

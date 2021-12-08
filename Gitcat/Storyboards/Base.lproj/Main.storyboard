@@ -16,8 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SearchLAbel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6J-4s-bwK">
+                                <rect key="frame" x="151.5" y="436" width="111.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kie-ZH-bvw">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reposCell" textLabel="Ibp-xB-sKR" detailTextLabel="YT1-JQ-35V" rowHeight="72" style="IBUITableViewCellStyleSubtitle" id="BbY-si-KoL">
@@ -51,13 +57,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Kie-ZH-bvw" firstAttribute="leading" secondItem="lF1-7B-I9V" secondAttribute="leading" id="DFf-Ye-hnV"/>
+                            <constraint firstItem="L6J-4s-bwK" firstAttribute="centerX" secondItem="8g2-Ga-fFY" secondAttribute="centerX" id="Tqv-xa-J4O"/>
                             <constraint firstAttribute="trailing" secondItem="Kie-ZH-bvw" secondAttribute="trailing" id="Zzn-yC-gwO"/>
                             <constraint firstItem="Kie-ZH-bvw" firstAttribute="top" secondItem="lF1-7B-I9V" secondAttribute="top" id="ebc-RJ-UmA"/>
                             <constraint firstItem="lF1-7B-I9V" firstAttribute="bottom" secondItem="Kie-ZH-bvw" secondAttribute="bottom" id="jWr-fm-Lz3"/>
+                            <constraint firstItem="L6J-4s-bwK" firstAttribute="centerY" secondItem="8g2-Ga-fFY" secondAttribute="centerY" id="ujq-cQ-7Xd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Repositories" largeTitleDisplayMode="always" id="VGG-u9-axx"/>
                     <connections>
+                        <outlet property="searchLabel" destination="L6J-4s-bwK" id="cjo-AD-GpR"/>
                         <outlet property="tableView" destination="Kie-ZH-bvw" id="Qfl-2N-ra9"/>
                     </connections>
                 </viewController>

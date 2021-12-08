@@ -14,6 +14,7 @@ class UsersViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     //MARK:- Varibles
     let spinner = UIActivityIndicatorView()
+    var searchController = UISearchController(searchResultsController: nil)
     var usersModel = [Users]()
     //MARK:- LifeCycle
     override func viewDidLoad() {
@@ -21,6 +22,7 @@ class UsersViewController: UIViewController {
         setupTableView()
         loadingIndicator()
         getUsersList()
+        setupSearchController(search: searchController)
     }
     //MARK:- Functions
     func loadingIndicator() {
