@@ -14,6 +14,11 @@ class UsersViewController: UIViewController {
     @IBOutlet weak var searchLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     //MARK:- Varibles
+    let afSession: Session = {
+        let interceptor = RequestIntercptor()
+        return Session(
+            interceptor: interceptor)
+    }()
     let spinner = UIActivityIndicatorView()
     var searchController = UISearchController(searchResultsController: nil)
     var usersModel = [User]()
@@ -55,7 +60,7 @@ class UsersViewController: UIViewController {
     func getUsersList(query: String) {
         spinner.startAnimating()
         let requestURL = Router.usersListAPIlink(query)
-        AF.request(requestURL).responseDecodable(of: Users.self, completionHandler: { response in
+        afSession.request(requestURL).responseDecodable(of: Users.self, completionHandler: { response in
                 switch response.result {
                 case .success(_):
                     guard let users = response.value else {return}

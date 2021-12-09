@@ -15,6 +15,11 @@ class RepositoriesViewController: UIViewController {
     @IBOutlet weak var searchLabel: UILabel!
     //MARK:- Varibles
     let spinner = UIActivityIndicatorView()
+    let afSession: Session = {
+        let interceptor = RequestIntercptor()
+        return Session(
+            interceptor: interceptor)
+    }()
     var searchController = UISearchController(searchResultsController: nil)
     var repositoriesModel = [Repository]()
     //MARK:- LifeCycle
@@ -55,7 +60,7 @@ class RepositoriesViewController: UIViewController {
     func getReposList(query: String) {
         spinner.startAnimating()
         let requestURL = Router.repositoryAPIlink(query)
-        AF.request(requestURL).responseDecodable(of: Repositories.self, completionHandler: { response in
+        afSession.request(requestURL).responseDecodable(of: Repositories.self, completionHandler: { response in
             switch response.result {
             case .success(_):
                 guard let repository = response.value else {return}

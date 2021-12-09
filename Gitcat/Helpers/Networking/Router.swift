@@ -11,12 +11,18 @@ import Alamofire
 enum Router {
     case usersListAPIlink(String)
     case repositoryAPIlink(String)
+    case accessTokenAPIlink(String)
+    case privateUserAPIlink
     
     var baseURL: String {
         switch self {
         case .usersListAPIlink:
             return "https://api.github.com"
         case .repositoryAPIlink:
+            return "https://api.github.com"
+        case .accessTokenAPIlink:
+            return "https://github.com"
+        case .privateUserAPIlink:
             return "https://api.github.com"
         }
     }
@@ -27,6 +33,10 @@ enum Router {
             return "/search/users"
         case .repositoryAPIlink:
             return "/search/repositories"
+        case .accessTokenAPIlink:
+            return "/login/oauth/access_token"
+        case .privateUserAPIlink:
+            return "/user"
         }
     }
     
@@ -35,6 +45,10 @@ enum Router {
         case .usersListAPIlink:
             return .get
         case .repositoryAPIlink:
+            return .get
+        case .accessTokenAPIlink:
+            return .post
+        case .privateUserAPIlink:
             return .get
         }
     }
@@ -45,6 +59,14 @@ enum Router {
             return ["per_page": "30" ,"sort": "repositories", "order": "desc", "q": query]
         case .repositoryAPIlink(let query):
             return ["per_page": "30", "sort": "stars", "order": "desc", "q": query]
+        case .accessTokenAPIlink(let accessToken):
+            return [
+                "client_id": Constants.clientID,
+                "client_secret": Constants.clientSecret,
+                "code": accessToken
+            ]
+        case .privateUserAPIlink:
+           return nil
         }
     }
 }
@@ -55,7 +77,12 @@ extension Router: URLRequestConvertible {
         let requestURL = try baseURL.asURL().appendingPathComponent(path)
         var request = URLRequest(url: requestURL)
         request.method = method
-        request = try URLEncodedFormParameterEncoder().encode(parameters, into: request)
+        if method == .get {
+            request = try URLEncodedFormParameterEncoder().encode(parameters, into: request)
+        } else if method == .post {
+            request = try JSONParameterEncoder().encode(parameters, into: request)
+            request.setValue("application/json", forHTTPHeaderField: "Accept")
+        }
         return request
     }
 }

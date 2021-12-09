@@ -9,6 +9,6 @@ import Kingfisher
 
 extension UIImageView {
     func downloadImage(urlString: String) {
-        self.kf.setImage(with: URL(string: urlString), placeholder: nil, options: [.transition(.fade(0.7))])
+        self.kf.setImage(with: URL(string: urlString), placeholder: nil, options: [.transition(.fade(0.5))])
     }
 }
