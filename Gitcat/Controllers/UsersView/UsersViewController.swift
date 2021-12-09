@@ -8,6 +8,7 @@
 import UIKit
 import Alamofire
 import SafariServices
+import CoreData
 
 class UsersViewController: UIViewController {
     //MARK:- IBOutlets
@@ -19,6 +20,7 @@ class UsersViewController: UIViewController {
         return Session(
             interceptor: interceptor)
     }()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let spinner = UIActivityIndicatorView()
     var searchController = UISearchController(searchResultsController: nil)
     var usersModel = [User]()
@@ -56,6 +58,14 @@ class UsersViewController: UIViewController {
         let action = UIAlertAction(title: btnTitle, style: .default)
         alert.addAction(action)
         self.present(alert, animated: true)
+    }
+    func saveUserToBookmarks (indexPath: IndexPath) {
+        let model = usersModel[indexPath.row]
+        let items = SavedUsers(context: self.context)
+        items.userName = model.userName
+        items.userAvatar = model.userAvatar
+        items.userURL = model.userURL
+        try! self.context.save()
     }
     func getUsersList(query: String) {
         spinner.startAnimating()
@@ -107,7 +117,7 @@ extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
         let identifier = "\(String(describing: index))" as NSString
         return UIContextMenuConfiguration( identifier: identifier, previewProvider: nil) { [weak self] _ in
             let bookmarkAction = UIAction(title: "Bookmark", image: UIImage(systemName: "bookmark.fill")) { _ in
-                
+                self?.saveUserToBookmarks(indexPath: indexPath)
             }
             let safariAction = UIAction(
                 title: "Open In Safari",

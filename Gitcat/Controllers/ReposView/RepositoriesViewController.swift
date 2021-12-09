@@ -8,6 +8,7 @@
 import UIKit
 import Alamofire
 import SafariServices
+import CoreData
 
 class RepositoriesViewController: UIViewController {
     //MARK:- IBOutlets
@@ -20,6 +21,7 @@ class RepositoriesViewController: UIViewController {
         return Session(
             interceptor: interceptor)
     }()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var searchController = UISearchController(searchResultsController: nil)
     var repositoriesModel = [Repository]()
     //MARK:- LifeCycle
@@ -72,6 +74,15 @@ class RepositoriesViewController: UIViewController {
             }
         })
     }
+    func saveRepos(indexPath: IndexPath) {
+        let saveRepoInfo = SavedRepositories(context: self.context)
+        let repository = repositoriesModel[indexPath.row]
+        saveRepoInfo.repoName = repository.repositoryName
+        saveRepoInfo.repoDescreipion = repository.repositoryDescription
+        saveRepoInfo.repoProgLang = repository.repositoryLanguage
+        saveRepoInfo.repoURL = repository.repositoryURL
+        try! self.context.save()
+    }
 }
 // MARK:- TableView
 extension RepositoriesViewController: UITableViewDataSource, UITableViewDelegate {
@@ -103,7 +114,7 @@ extension RepositoriesViewController: UITableViewDataSource, UITableViewDelegate
         let identifier = "\(String(describing: index))" as NSString
         return UIContextMenuConfiguration( identifier: identifier, previewProvider: nil) { [weak self] _ in
             let bookmarkAction = UIAction(title: "Bookmark", image: UIImage(systemName: "bookmark.fill")) { _ in
-                
+                self?.saveRepos(indexPath: indexPath)
             }
             let safariAction = UIAction(
                 title: "Open In Safari",

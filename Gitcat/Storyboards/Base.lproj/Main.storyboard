@@ -119,28 +119,23 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="ZnU-yK-ruC">
                                 <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="OK4-rU-pBT" id="Mds-uU-vbe"/>
+                                    <outlet property="delegate" destination="OK4-rU-pBT" id="QQE-Zx-jke"/>
+                                </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2c0-9a-RkA">
-                                <rect key="frame" x="183" y="436" width="48" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3jc-bY-uEw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2c0-9a-RkA" firstAttribute="centerY" secondItem="RLC-aR-Epx" secondAttribute="centerY" id="3on-rX-Ej6"/>
                             <constraint firstItem="3jc-bY-uEw" firstAttribute="bottom" secondItem="ZnU-yK-ruC" secondAttribute="bottom" id="8ZZ-gf-wy3"/>
                             <constraint firstItem="ZnU-yK-ruC" firstAttribute="leading" secondItem="3jc-bY-uEw" secondAttribute="leading" id="HLR-lw-QhA"/>
                             <constraint firstItem="ZnU-yK-ruC" firstAttribute="top" secondItem="3jc-bY-uEw" secondAttribute="top" id="V8a-Yu-SQU"/>
-                            <constraint firstItem="2c0-9a-RkA" firstAttribute="centerX" secondItem="RLC-aR-Epx" secondAttribute="centerX" id="Vf5-N0-Mx8"/>
                             <constraint firstItem="3jc-bY-uEw" firstAttribute="trailing" secondItem="ZnU-yK-ruC" secondAttribute="trailing" id="Ytq-us-n3P"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Bookmarks" id="XfN-el-Bbg"/>
                     <connections>
-                        <outlet property="searchLabel" destination="2c0-9a-RkA" id="c7e-xL-Uxp"/>
                         <outlet property="tableView" destination="ZnU-yK-ruC" id="NPI-D1-BTC"/>
                     </connections>
                 </viewController>
@@ -461,7 +456,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProfileTableViewCell" rowHeight="60" id="vXe-dV-7TM" customClass="ProfileTableViewCell" customModule="Githubgenics" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProfileTableViewCell" rowHeight="60" id="vXe-dV-7TM" customClass="ProfileTableViewCell" customModule="Gitcat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="231.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vXe-dV-7TM" id="dxo-On-k09">

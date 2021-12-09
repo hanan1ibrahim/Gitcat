@@ -14,4 +14,13 @@ class UsersCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    func cellData(with model: SavedUsers) {
+        self.userName.text = model.userName
+        guard let avatarURL = model.userAvatar else { return }
+        self.userAvatar.kf.setImage(with: URL(string: avatarURL), placeholder: nil, options: [.transition(.fade(0.7))])
+        userAvatar.contentMode = .scaleAspectFill
+        userAvatar.layer.masksToBounds = false
+        userAvatar.layer.cornerRadius = userAvatar.frame.height/2
+        userAvatar.clipsToBounds = true
+    }
 }

@@ -16,4 +16,10 @@ class ReposCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    func cellData(with model: SavedRepositories) {
+        self.userRepoName?.text = model.repoName
+        self.userRepoDescription?.text = model.repoDescreipion
+        self.userRepoStars?.text = String(Int.random(in: 143...4345))
+        self.userRepoLangauge?.text = model.repoProgLang
+    }
 }

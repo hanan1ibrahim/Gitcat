@@ -46,6 +46,7 @@
 		EA5F6FE3275FD75600DAAAE8 /* ReposCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F6FE1275FD75600DAAAE8 /* ReposCell.swift */; };
 		EA5F6FE4275FD75600DAAAE8 /* ReposCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5F6FE2275FD75600DAAAE8 /* ReposCell.xib */; };
 		EA5F6FF02760B11B00DAAAE8 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F6FEF2760B11B00DAAAE8 /* Repository.swift */; };
+		EAD71D4D2762765000EA55FF /* DataBaseManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD71D4C2762765000EA55FF /* DataBaseManger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		EA5F6FE1275FD75600DAAAE8 /* ReposCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposCell.swift; sourceTree = "<group>"; };
 		EA5F6FE2275FD75600DAAAE8 /* ReposCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReposCell.xib; sourceTree = "<group>"; };
 		EA5F6FEF2760B11B00DAAAE8 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		EAD71D4C2762765000EA55FF /* DataBaseManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,6 +294,7 @@
 		EA5F6FC0275FBEF000DAAAE8 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				EAD71D4B2762764200EA55FF /* Mangers */,
 				EA5A25CE27625D1200DD4F79 /* Resources */,
 				EA5A25C127625B6200DD4F79 /* Localization */,
 				EA5A25B32762557400DD4F79 /* KeyChain */,
@@ -369,6 +372,14 @@
 				EA5F6FE2275FD75600DAAAE8 /* ReposCell.xib */,
 			);
 			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		EAD71D4B2762764200EA55FF /* Mangers */ = {
+			isa = PBXGroup;
+			children = (
+				EAD71D4C2762765000EA55FF /* DataBaseManger.swift */,
+			);
+			path = Mangers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -494,6 +505,7 @@
 				EA5A25AF2762544100DD4F79 /* Interceptor.swift in Sources */,
 				EA5F6FAA275FBE1500DAAAE8 /* UsersViewController.swift in Sources */,
 				EA5F6FA6275FBE1500DAAAE8 /* AppDelegate.swift in Sources */,
+				EAD71D4D2762765000EA55FF /* DataBaseManger.swift in Sources */,
 				EA5F6FD7275FD33C00DAAAE8 /* ImageView+Ext.swift in Sources */,
 				EA5A25DD276271D000DD4F79 /* SettingsViewController.swift in Sources */,
 				EA5A25D027625DCB00DD4F79 /* ProfileViewController.swift in Sources */,

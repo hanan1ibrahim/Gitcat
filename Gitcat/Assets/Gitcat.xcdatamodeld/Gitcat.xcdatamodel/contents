@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20E232" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="SavedRepositories" representedClassName="SavedRepositories" syncable="YES" codeGenerationType="class">
+        <attribute name="repoDescreipion" optional="YES" attributeType="String"/>
+        <attribute name="repoFullName" optional="YES" attributeType="String"/>
+        <attribute name="repoName" optional="YES" attributeType="String"/>
+        <attribute name="repoProgLang" optional="YES" attributeType="String"/>
+        <attribute name="repoURL" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="SavedUsers" representedClassName="SavedUsers" syncable="YES" codeGenerationType="class">
+        <attribute name="userAvatar" optional="YES" attributeType="String"/>
+        <attribute name="userName" optional="YES" attributeType="String"/>
+        <attribute name="userURL" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="SavedUsers" positionX="-63" positionY="-18" width="128" height="74"/>
+        <element name="SavedRepositories" positionX="-54" positionY="18" width="128" height="104"/>
+    </elements>
 </model>
