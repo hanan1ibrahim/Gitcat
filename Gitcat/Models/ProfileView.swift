@@ -8,6 +8,6 @@
 import Foundation
 
 struct ProfileTableData {
-    let cellHeader: String
-    let image: String
+    let cellTitle: String
+    let cellImage: String
 }

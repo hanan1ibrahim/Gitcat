@@ -56,7 +56,7 @@ struct Titles {
     static let noStarred                  = "There aren't any Starred".localized()
     static let noBookmarks              = "There aren't any Bookmarks".localized()
     static let noIssues                 = "There aren't any Issues".localized()
-    static let noToken             = "Not Signed In"
+    static let notLoggedInUser             = "Not Signed In"
     
     //MARK:- Before Search Title Labels
     static let searchForUsers           = "Search For Users".localized()

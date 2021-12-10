@@ -465,7 +465,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProfileTableViewCell" rowHeight="60" id="vXe-dV-7TM" customClass="ProfileTableViewCell" customModule="Gitcat" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProfileCell" rowHeight="60" id="vXe-dV-7TM">
                                         <rect key="frame" x="0.0" y="231.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vXe-dV-7TM" id="dxo-On-k09">
@@ -507,14 +507,22 @@
                                     <outlet property="delegate" destination="ggb-8a-fL3" id="tMb-pq-pDj"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxU-26-bnY">
+                                <rect key="frame" x="183" y="436" width="48" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mw4-Ph-r8N"/>
                         <color key="backgroundColor" name="Dark"/>
                         <constraints>
                             <constraint firstItem="s5t-Tp-8pK" firstAttribute="leading" secondItem="mw4-Ph-r8N" secondAttribute="leading" id="9F0-hu-zJi"/>
                             <constraint firstItem="aay-cs-joP" firstAttribute="top" secondItem="mw4-Ph-r8N" secondAttribute="top" id="LkA-7v-Y7R"/>
+                            <constraint firstItem="yxU-26-bnY" firstAttribute="centerX" secondItem="zKG-R6-6aU" secondAttribute="centerX" id="N6j-BM-yhP"/>
                             <constraint firstItem="aay-cs-joP" firstAttribute="trailing" secondItem="mw4-Ph-r8N" secondAttribute="trailing" id="Obb-pn-k1K"/>
                             <constraint firstItem="mw4-Ph-r8N" firstAttribute="trailing" secondItem="s5t-Tp-8pK" secondAttribute="trailing" id="Zl5-lm-e7i"/>
+                            <constraint firstItem="yxU-26-bnY" firstAttribute="centerY" secondItem="zKG-R6-6aU" secondAttribute="centerY" id="aGh-oT-nj6"/>
                             <constraint firstItem="s5t-Tp-8pK" firstAttribute="top" secondItem="mw4-Ph-r8N" secondAttribute="top" id="lHZ-pC-emM"/>
                             <constraint firstAttribute="bottom" secondItem="aay-cs-joP" secondAttribute="bottom" id="rk3-0g-yRX"/>
                             <constraint firstItem="aay-cs-joP" firstAttribute="leading" secondItem="mw4-Ph-r8N" secondAttribute="leading" id="rqu-F7-0NC"/>
@@ -528,12 +536,12 @@
                     <navigationItem key="navigationItem" title="Profile" largeTitleDisplayMode="always" id="WxP-5E-EZQ">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="gearshape" catalog="system" id="XED-Fu-2oh">
                             <connections>
-                                <action selector="didTapSettingsButton:" destination="ggb-8a-fL3" id="4Tv-6g-QMz"/>
                                 <segue destination="zox-ZQ-wHj" kind="show" id="9oW-ER-7Ea"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="conditionLabel" destination="yxU-26-bnY" id="vQX-Wn-n5l"/>
                         <outlet property="settingsButton" destination="XED-Fu-2oh" id="6jz-2b-Z5F"/>
                         <outlet property="tableView" destination="aay-cs-joP" id="3SJ-lo-BSL"/>
                         <outlet property="userAvatar" destination="gYX-zg-0DD" id="2BC-WV-v8W"/>

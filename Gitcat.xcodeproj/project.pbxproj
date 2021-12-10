@@ -25,7 +25,6 @@
 		EA5A25CD27625D0F00DD4F79 /* loadingspinner.json in Resources */ = {isa = PBXBuildFile; fileRef = EA5A25CC27625D0F00DD4F79 /* loadingspinner.json */; };
 		EA5A25D027625DCB00DD4F79 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A25CF27625DCB00DD4F79 /* ProfileViewController.swift */; };
 		EA5A25D327626A5300DD4F79 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A25D227626A5300DD4F79 /* View+Ext.swift */; };
-		EA5A25D527626A7F00DD4F79 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A25D427626A7F00DD4F79 /* ProfileTableViewCell.swift */; };
 		EA5A25D727626B3F00DD4F79 /* PrivateUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A25D627626B3F00DD4F79 /* PrivateUsers.swift */; };
 		EA5A25D927626D8C00DD4F79 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A25D827626D8C00DD4F79 /* ProfileView.swift */; };
 		EA5A25DD276271D000DD4F79 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A25DC276271D000DD4F79 /* SettingsViewController.swift */; };
@@ -70,7 +69,6 @@
 		EA5A25CC27625D0F00DD4F79 /* loadingspinner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loadingspinner.json; sourceTree = "<group>"; };
 		EA5A25CF27625DCB00DD4F79 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		EA5A25D227626A5300DD4F79 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
-		EA5A25D427626A7F00DD4F79 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		EA5A25D627626B3F00DD4F79 /* PrivateUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateUsers.swift; sourceTree = "<group>"; };
 		EA5A25D827626D8C00DD4F79 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		EA5A25DC276271D000DD4F79 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -196,17 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				EA5A25CF27625DCB00DD4F79 /* ProfileViewController.swift */,
-				EA5A25DA27626EF800DD4F79 /* CustomCell */,
 			);
 			path = ProfileView;
-			sourceTree = "<group>";
-		};
-		EA5A25DA27626EF800DD4F79 /* CustomCell */ = {
-			isa = PBXGroup;
-			children = (
-				EA5A25D427626A7F00DD4F79 /* ProfileTableViewCell.swift */,
-			);
-			path = CustomCell;
 			sourceTree = "<group>";
 		};
 		EA5A25DB276271BD00DD4F79 /* SettingsView */ = {
@@ -524,7 +513,6 @@
 				EA5F6FE3275FD75600DAAAE8 /* ReposCell.swift in Sources */,
 				EA5A25B22762551600DD4F79 /* AuthConstants.swift in Sources */,
 				EA5A251F2761283B00DD4F79 /* UIVC+Ext.swift in Sources */,
-				EA5A25D527626A7F00DD4F79 /* ProfileTableViewCell.swift in Sources */,
 				EA5A25B92762558700DD4F79 /* SecureStore.swift in Sources */,
 				EA5A25C327625B6E00DD4F79 /* Titles.swift in Sources */,
 				EA5A25BD2762562A00DD4F79 /* TokenManger.swift in Sources */,
