@@ -46,6 +46,8 @@
 		EA5F6FE4275FD75600DAAAE8 /* ReposCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5F6FE2275FD75600DAAAE8 /* ReposCell.xib */; };
 		EA5F6FF02760B11B00DAAAE8 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F6FEF2760B11B00DAAAE8 /* Repository.swift */; };
 		EAD71D4D2762765000EA55FF /* DataBaseManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD71D4C2762765000EA55FF /* DataBaseManger.swift */; };
+		EAD71D602763833900EA55FF /* SettingsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAD71D5E2763833800EA55FF /* SettingsCollectionViewCell.xib */; };
+		EAD71D612763833900EA55FF /* SettingsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD71D5F2763833900EA55FF /* SettingsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +94,8 @@
 		EA5F6FE2275FD75600DAAAE8 /* ReposCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReposCell.xib; sourceTree = "<group>"; };
 		EA5F6FEF2760B11B00DAAAE8 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		EAD71D4C2762765000EA55FF /* DataBaseManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManger.swift; sourceTree = "<group>"; };
+		EAD71D5E2763833800EA55FF /* SettingsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsCollectionViewCell.xib; sourceTree = "<group>"; };
+		EAD71D5F2763833900EA55FF /* SettingsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +205,7 @@
 		EA5A25DB276271BD00DD4F79 /* SettingsView */ = {
 			isa = PBXGroup;
 			children = (
+				EAD71D622763861A00EA55FF /* CustomCell */,
 				EA5A25DC276271D000DD4F79 /* SettingsViewController.swift */,
 			);
 			path = SettingsView;
@@ -252,11 +257,7 @@
 			children = (
 				EA5A25C927625C4300DD4F79 /* AnimationView */,
 				EA5A25BE27625B0500DD4F79 /* LoginView */,
-				EA5A25C627625BD000DD4F79 /* TabBarView */,
-				EA5F6FDF275FD58D00DAAAE8 /* UsersView */,
-				EA5F6FE0275FD59500DAAAE8 /* ReposView */,
-				EA5A25202761287A00DD4F79 /* BookmarksView */,
-				EA5A25D127625DCE00DD4F79 /* ProfileView */,
+				EAD71D5627637B6200EA55FF /* TabBarViewControllers */,
 				EA5A25DB276271BD00DD4F79 /* SettingsView */,
 			);
 			path = Controllers;
@@ -371,6 +372,27 @@
 			path = Mangers;
 			sourceTree = "<group>";
 		};
+		EAD71D5627637B6200EA55FF /* TabBarViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EA5A25C627625BD000DD4F79 /* TabBarView */,
+				EA5F6FDF275FD58D00DAAAE8 /* UsersView */,
+				EA5F6FE0275FD59500DAAAE8 /* ReposView */,
+				EA5A25202761287A00DD4F79 /* BookmarksView */,
+				EA5A25D127625DCE00DD4F79 /* ProfileView */,
+			);
+			path = TabBarViewControllers;
+			sourceTree = "<group>";
+		};
+		EAD71D622763861A00EA55FF /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				EAD71D5F2763833900EA55FF /* SettingsCollectionViewCell.swift */,
+				EAD71D5E2763833800EA55FF /* SettingsCollectionViewCell.xib */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -434,6 +456,7 @@
 				EA5F6FB5275FBE1600DAAAE8 /* LaunchScreen.storyboard in Resources */,
 				EA5A25CD27625D0F00DD4F79 /* loadingspinner.json in Resources */,
 				EA5F6FB2275FBE1600DAAAE8 /* Assets.xcassets in Resources */,
+				EAD71D602763833900EA55FF /* SettingsCollectionViewCell.xib in Resources */,
 				EA5F6FE4275FD75600DAAAE8 /* ReposCell.xib in Resources */,
 				EA5F6FAD275FBE1500DAAAE8 /* Main.storyboard in Resources */,
 			);
@@ -516,6 +539,7 @@
 				EA5A25B92762558700DD4F79 /* SecureStore.swift in Sources */,
 				EA5A25C327625B6E00DD4F79 /* Titles.swift in Sources */,
 				EA5A25BD2762562A00DD4F79 /* TokenManger.swift in Sources */,
+				EAD71D612763833900EA55FF /* SettingsCollectionViewCell.swift in Sources */,
 				EA5A25D727626B3F00DD4F79 /* PrivateUsers.swift in Sources */,
 				EA5A25CB27625C4C00DD4F79 /* AnimationViewController.swift in Sources */,
 				EA5A25B72762558700DD4F79 /* SecureStoreError.swift in Sources */,

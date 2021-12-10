@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Zf-jo-W47">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -536,7 +535,7 @@
                     <navigationItem key="navigationItem" title="Profile" largeTitleDisplayMode="always" id="WxP-5E-EZQ">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="gearshape" catalog="system" id="XED-Fu-2oh">
                             <connections>
-                                <segue destination="zox-ZQ-wHj" kind="show" id="9oW-ER-7Ea"/>
+                                <segue destination="8CH-06-FMX" kind="show" id="otb-cq-Quc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -555,59 +554,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="maG-ac-cOz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4479.7101449275369" y="984.375"/>
-        </scene>
-        <!--Settings-->
-        <scene sceneID="Xfp-YN-NRI">
-            <objects>
-                <viewController storyboardIdentifier="SettingsViewController" id="zox-ZQ-wHj" customClass="SettingsViewController" customModule="Gitcat" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="iVu-Z1-V7s">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UOj-pN-icZ">
-                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oMH-yr-zNK">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="e8g-2a-eHi">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ZvW-gc-MpL">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="L4d-tJ-QRe"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="L4d-tJ-QRe" firstAttribute="bottom" secondItem="UOj-pN-icZ" secondAttribute="bottom" id="Ujc-QG-tPs"/>
-                            <constraint firstItem="UOj-pN-icZ" firstAttribute="leading" secondItem="L4d-tJ-QRe" secondAttribute="leading" id="Z0P-Gw-zcj"/>
-                            <constraint firstItem="L4d-tJ-QRe" firstAttribute="trailing" secondItem="UOj-pN-icZ" secondAttribute="trailing" id="bPH-rr-sVm"/>
-                            <constraint firstItem="UOj-pN-icZ" firstAttribute="top" secondItem="L4d-tJ-QRe" secondAttribute="top" id="xza-gb-4sb"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Settings" id="apV-E8-XgP">
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="CUl-vy-f1u">
-                            <connections>
-                                <action selector="didTapLogut:" destination="zox-ZQ-wHj" id="gWG-6T-TL9"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="logOutButton" destination="CUl-vy-f1u" id="5Ny-Ps-nLu"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qno-s4-eGt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6226.0869565217399" y="1050"/>
         </scene>
         <!--Profile-->
         <scene sceneID="tm6-mb-9AJ">
@@ -628,6 +574,55 @@
             </objects>
             <point key="canvasLocation" x="3569.5652173913045" y="984.375"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="NQp-PN-OhL">
+            <objects>
+                <viewController storyboardIdentifier="MoreViewController" id="8CH-06-FMX" customClass="SettingsViewController" customModule="Nakd" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OH2-bP-vOt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9gx-CX-Rsv">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <color key="backgroundColor" name="DetailViewColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cxb-Rw-h5L">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8CH-06-FMX" id="4bA-7q-AgT"/>
+                                    <outlet property="delegate" destination="8CH-06-FMX" id="FgH-xr-Y05"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="efV-BM-pPM"/>
+                        <color key="backgroundColor" name="ViewsColorBallet"/>
+                        <constraints>
+                            <constraint firstItem="9gx-CX-Rsv" firstAttribute="leading" secondItem="efV-BM-pPM" secondAttribute="leading" id="Ay1-p9-uKo"/>
+                            <constraint firstItem="efV-BM-pPM" firstAttribute="trailing" secondItem="9gx-CX-Rsv" secondAttribute="trailing" id="Ixn-8n-KBk"/>
+                            <constraint firstItem="efV-BM-pPM" firstAttribute="bottom" secondItem="9gx-CX-Rsv" secondAttribute="bottom" id="bh5-d6-ZGP"/>
+                            <constraint firstItem="9gx-CX-Rsv" firstAttribute="top" secondItem="efV-BM-pPM" secondAttribute="top" id="q3h-k8-0oT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" largeTitleDisplayMode="always" id="MWz-Ll-szS">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="tZq-dw-k66">
+                            <connections>
+                                <action selector="didTapLogut:" destination="8CH-06-FMX" id="fVb-qr-DKb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="9gx-CX-Rsv" id="ci8-lz-v5N"/>
+                        <outlet property="logOutButton" destination="tZq-dw-k66" id="MPs-3F-8Nw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nGb-gX-M7j" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5293" y="1011"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Github" width="471" height="460"/>
@@ -646,6 +641,9 @@
         </namedColor>
         <namedColor name="Darkmode">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DetailViewColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Labels">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
