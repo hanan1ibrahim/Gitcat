@@ -7,11 +7,11 @@
 
 enum Constants {
     //  gitcat app github outh app iD
-  static let clientID = "d6fff7c17d7d994ff7d8"
+  static let clientID = "59b127021e68a33027c4"
     // gitcat app authentication code
-  static let clientSecret = "843b24ffce1c3c48ff0e2c09479936121c61996e"
+  static let clientSecret = "2cc103c8ca1206722a551f4756f64d054319b34e"
     // gitcat urlScheme
-    static let redirectURI = "gitcatappp"
+    static let redirectURI = "gitcatapp"
     // the items you will accesss
   static let scope = "repo user"
     // the login link
