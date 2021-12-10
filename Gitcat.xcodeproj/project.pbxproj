@@ -24,7 +24,6 @@
 		EA5A25CB27625C4C00DD4F79 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A25CA27625C4C00DD4F79 /* AnimationViewController.swift */; };
 		EA5A25CD27625D0F00DD4F79 /* loadingspinner.json in Resources */ = {isa = PBXBuildFile; fileRef = EA5A25CC27625D0F00DD4F79 /* loadingspinner.json */; };
 		EA5A25D027625DCB00DD4F79 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A25CF27625DCB00DD4F79 /* ProfileViewController.swift */; };
-		EA5A25D327626A5300DD4F79 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A25D227626A5300DD4F79 /* View+Ext.swift */; };
 		EA5A25D727626B3F00DD4F79 /* PrivateUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A25D627626B3F00DD4F79 /* PrivateUsers.swift */; };
 		EA5A25D927626D8C00DD4F79 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A25D827626D8C00DD4F79 /* ProfileView.swift */; };
 		EA5A25DD276271D000DD4F79 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A25DC276271D000DD4F79 /* SettingsViewController.swift */; };
@@ -71,7 +70,6 @@
 		EA5A25CA27625C4C00DD4F79 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		EA5A25CC27625D0F00DD4F79 /* loadingspinner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loadingspinner.json; sourceTree = "<group>"; };
 		EA5A25CF27625DCB00DD4F79 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		EA5A25D227626A5300DD4F79 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		EA5A25D627626B3F00DD4F79 /* PrivateUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateUsers.swift; sourceTree = "<group>"; };
 		EA5A25D827626D8C00DD4F79 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		EA5A25DC276271D000DD4F79 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -327,7 +325,6 @@
 				EA5F6FDC275FD4DB00DAAAE8 /* TableView+Ext.swift */,
 				EA5A251E2761283B00DD4F79 /* UIVC+Ext.swift */,
 				EA5A25C427625BAF00DD4F79 /* Storyboad+Ext.swift */,
-				EA5A25D227626A5300DD4F79 /* View+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -517,7 +514,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA5A25D327626A5300DD4F79 /* View+Ext.swift in Sources */,
 				EA5A25222761289100DD4F79 /* BookmarksViewController.swift in Sources */,
 				EA5A25C527625BAF00DD4F79 /* Storyboad+Ext.swift in Sources */,
 				EA5A25AF2762544100DD4F79 /* Interceptor.swift in Sources */,
