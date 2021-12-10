@@ -124,6 +124,12 @@
                                     <outlet property="delegate" destination="OK4-rU-pBT" id="QQE-Zx-jke"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Bookmarks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJf-FT-7Hh">
+                                <rect key="frame" x="143" y="436" width="128.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3jc-bY-uEw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -132,10 +138,13 @@
                             <constraint firstItem="ZnU-yK-ruC" firstAttribute="leading" secondItem="3jc-bY-uEw" secondAttribute="leading" id="HLR-lw-QhA"/>
                             <constraint firstItem="ZnU-yK-ruC" firstAttribute="top" secondItem="3jc-bY-uEw" secondAttribute="top" id="V8a-Yu-SQU"/>
                             <constraint firstItem="3jc-bY-uEw" firstAttribute="trailing" secondItem="ZnU-yK-ruC" secondAttribute="trailing" id="Ytq-us-n3P"/>
+                            <constraint firstItem="aJf-FT-7Hh" firstAttribute="centerY" secondItem="RLC-aR-Epx" secondAttribute="centerY" id="hD1-A6-WEP"/>
+                            <constraint firstItem="aJf-FT-7Hh" firstAttribute="centerX" secondItem="RLC-aR-Epx" secondAttribute="centerX" id="ijO-ca-iJi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Bookmarks" id="XfN-el-Bbg"/>
                     <connections>
+                        <outlet property="searchLabel" destination="aJf-FT-7Hh" id="tyh-hL-Pac"/>
                         <outlet property="tableView" destination="ZnU-yK-ruC" id="NPI-D1-BTC"/>
                     </connections>
                 </viewController>

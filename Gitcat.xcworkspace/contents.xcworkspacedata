@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:SavedUsers+CoreDataClass.swift">
-   </FileRef>
-   <FileRef
-      location = "group:SavedUsers+CoreDataProperties.swift">
-   </FileRef>
-   <FileRef
       location = "group:Gitcat.xcodeproj">
    </FileRef>
    <FileRef

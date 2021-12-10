@@ -261,14 +261,14 @@
 		EA5F6FBD275FBEBE00DAAAE8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EA5A25DB276271BD00DD4F79 /* SettingsView */,
 				EA5A25C927625C4300DD4F79 /* AnimationView */,
-				EA5A25C627625BD000DD4F79 /* TabBarView */,
 				EA5A25BE27625B0500DD4F79 /* LoginView */,
+				EA5A25C627625BD000DD4F79 /* TabBarView */,
 				EA5F6FDF275FD58D00DAAAE8 /* UsersView */,
-				EA5A25202761287A00DD4F79 /* BookmarksView */,
 				EA5F6FE0275FD59500DAAAE8 /* ReposView */,
+				EA5A25202761287A00DD4F79 /* BookmarksView */,
 				EA5A25D127625DCE00DD4F79 /* ProfileView */,
+				EA5A25DB276271BD00DD4F79 /* SettingsView */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
