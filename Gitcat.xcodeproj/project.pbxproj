@@ -48,6 +48,7 @@
 		EAD71D4D2762765000EA55FF /* DataBaseManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD71D4C2762765000EA55FF /* DataBaseManger.swift */; };
 		EAD71D602763833900EA55FF /* SettingsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAD71D5E2763833800EA55FF /* SettingsCollectionViewCell.xib */; };
 		EAD71D612763833900EA55FF /* SettingsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD71D5F2763833900EA55FF /* SettingsCollectionViewCell.swift */; };
+		EAD71D6A2763E99000EA55FF /* localize.strings in Resources */ = {isa = PBXBuildFile; fileRef = EAD71D692763E99000EA55FF /* localize.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,8 @@
 		EAD71D4C2762765000EA55FF /* DataBaseManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManger.swift; sourceTree = "<group>"; };
 		EAD71D5E2763833800EA55FF /* SettingsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsCollectionViewCell.xib; sourceTree = "<group>"; };
 		EAD71D5F2763833900EA55FF /* SettingsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCollectionViewCell.swift; sourceTree = "<group>"; };
+		EAD71D6527638ECB00EA55FF /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		EAD71D692763E99000EA55FF /* localize.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = localize.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				EA5A25C227625B6E00DD4F79 /* Titles.swift */,
+				EAD71D692763E99000EA55FF /* localize.strings */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -436,6 +440,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = EA5F6F99275FBE1500DAAAE8;
 			productRefGroup = EA5F6FA3275FBE1500DAAAE8 /* Products */;
@@ -455,6 +460,7 @@
 				EA5F6FDB275FD3FE00DAAAE8 /* UsersCell.xib in Resources */,
 				EA5F6FB5275FBE1600DAAAE8 /* LaunchScreen.storyboard in Resources */,
 				EA5A25CD27625D0F00DD4F79 /* loadingspinner.json in Resources */,
+				EAD71D6A2763E99000EA55FF /* localize.strings in Resources */,
 				EA5F6FB2275FBE1600DAAAE8 /* Assets.xcassets in Resources */,
 				EAD71D602763833900EA55FF /* SettingsCollectionViewCell.xib in Resources */,
 				EA5F6FE4275FD75600DAAAE8 /* ReposCell.xib in Resources */,
@@ -562,6 +568,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				EA5F6FB4275FBE1600DAAAE8 /* Base */,
+				EAD71D6527638ECB00EA55FF /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -573,6 +580,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -620,7 +628,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -634,6 +642,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -675,7 +684,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

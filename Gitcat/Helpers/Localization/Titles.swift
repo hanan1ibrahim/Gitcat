@@ -81,7 +81,7 @@ struct Titles {
 
 extension String {
     func localized () -> String {
-        return NSLocalizedString(self, tableName: "localizable", bundle: .main, value: self, comment: self
+        return NSLocalizedString(self, tableName: "localize", bundle: .main, value: self, comment: self
         )
     }
 }
