@@ -12,7 +12,7 @@
         <!--Repositories-->
         <scene sceneID="cJU-FV-kjx">
             <objects>
-                <viewController id="yLu-tm-Bdp" customClass="RepositoriesViewController" customModule="Gitcat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RepositoriesViewController" id="yLu-tm-Bdp" customClass="RepositoriesViewController" customModule="Gitcat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8g2-Ga-fFY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,7 +52,7 @@
         <!--Users-->
         <scene sceneID="aMd-KV-jsY">
             <objects>
-                <viewController id="uBh-zC-dhb" customClass="UsersViewController" customModule="Gitcat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UsersViewController" id="uBh-zC-dhb" customClass="UsersViewController" customModule="Gitcat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3ZX-Vf-Ysw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,7 +111,7 @@
         <!--Bookmarks-->
         <scene sceneID="ekf-4p-hsa">
             <objects>
-                <viewController id="OK4-rU-pBT" customClass="BookmarksViewController" customModule="Gitcat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BookmarksViewController" id="OK4-rU-pBT" customClass="BookmarksViewController" customModule="Gitcat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RLC-aR-Epx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -577,7 +577,7 @@
         <!--Settings-->
         <scene sceneID="NQp-PN-OhL">
             <objects>
-                <viewController storyboardIdentifier="MoreViewController" id="8CH-06-FMX" customClass="SettingsViewController" customModule="Nakd" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MoreViewController" id="8CH-06-FMX" customClass="SettingsViewController" customModule="Gitcat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OH2-bP-vOt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

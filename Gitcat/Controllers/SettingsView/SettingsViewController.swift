@@ -34,7 +34,7 @@ class SettingsViewController: UIViewController {
         collectionView.register( UINib(nibName: "SettingsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SettingsCollectionViewCell")
     }
     func initView () {
-        title = "More".localized()
+        title = "Settings".localized()
         collectionData()
     }
     @IBAction func didTapLogut(_ sender: Any) {

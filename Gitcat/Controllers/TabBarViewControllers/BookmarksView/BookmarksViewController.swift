@@ -47,9 +47,10 @@ class BookmarksViewController: UIViewController {
     func initSearchBar() {
         setupSearchController(search: searchController)
         searchController.searchBar.delegate = self
+        searchController.searchBar.placeholder = "Search ...".localized()
     }
     func searchLabelData() {
-        searchLabel.text = Titles.noBookmarks
+        searchLabel.text = "No Bookmarks".localized()
     }
     func tableViewData() {
         tableView.registerCellNib(cellClass: UsersCell.self)
@@ -192,7 +193,7 @@ extension BookmarksViewController: UISearchBarDelegate {
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchLabel.isHidden = false
         tableView.isHidden = true
-        searchLabel.text = "Search For Bookmarks"
+        searchLabel.text = "Search For saved".localized()
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchLabel.isHidden = true
@@ -202,6 +203,6 @@ extension BookmarksViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         fetchCoreDataModels()
         noBookmarksLabelState()
-        searchLabel.text = Titles.noBookmarks
+        searchLabel.text = "No Bookmarks".localized()
     }
 }

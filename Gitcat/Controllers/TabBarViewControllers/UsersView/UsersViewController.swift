@@ -32,6 +32,7 @@ class UsersViewController: UIViewController {
         configureUI()
         initData()
         setupSearchController(search: searchController)
+        searchController.searchBar.placeholder = "Search ...".localized()
     }
     //MARK:- Functions
     func loadingIndicator() {
@@ -43,10 +44,11 @@ class UsersViewController: UIViewController {
         getUsersList(query: "Hanan")
     }
     func configureUI() {
-        title = "Users"
+        title = Titles.usersViewTitle
+        tabBarItem.title = Titles.usersViewTitle
         searchController.searchBar.delegate = self
         searchLabel.isHidden = true
-        searchLabel.text = "Search For Users"
+        searchLabel.text = "Search For users.".localized()
     }
     func setupTableView() {
         tableView.dataSource = self
@@ -116,11 +118,11 @@ extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView( _ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
         let identifier = "\(String(describing: index))" as NSString
         return UIContextMenuConfiguration( identifier: identifier, previewProvider: nil) { [weak self] _ in
-            let bookmarkAction = UIAction(title: "Bookmark", image: UIImage(systemName: "bookmark.fill")) { _ in
+            let bookmarkAction = UIAction(title: Titles.bookmark, image: UIImage(systemName: "bookmark.fill")) { _ in
                 self?.saveUserToBookmarks(indexPath: indexPath)
             }
             let safariAction = UIAction(
-                title: "Open In Safari",
+                title: Titles.urlTitle,
                 image: UIImage(systemName: "link")) { _ in
                 let userURL = self?.usersModel[indexPath.row].userURL
                 let safariVC = SFSafariViewController(url: URL(string: userURL ?? "")!)
@@ -128,7 +130,7 @@ extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
             }
             
             let shareAction = UIAction(
-                title: "Share",
+                title: Titles.share,
                 image: UIImage(systemName: "square.and.arrow.up")) { _ in
                 let image = UIImage(systemName: "bell")
                 let userURL = self?.usersModel[indexPath.row].userURL

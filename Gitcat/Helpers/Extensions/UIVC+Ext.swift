@@ -13,7 +13,6 @@ extension UIViewController {
         search.hidesNavigationBarDuringPresentation = true
         navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
-        search.searchBar.placeholder = "Search ..."
         navigationItem.searchController = search
     }
 }

@@ -43,10 +43,12 @@ class RepositoriesViewController: UIViewController {
         getReposList(query: "language:Swift")
     }
     func configureUI() {
-        title = "Repositories"
+        title = Titles.repositoriesViewTitle
+        tabBarItem.title = Titles.repositoriesViewTitle
         searchController.searchBar.delegate = self
         searchLabel.isHidden = true
-        searchLabel.text = "Search For Repositories"
+        searchLabel.text = "Search For repos.".localized()
+        searchController.searchBar.placeholder = "Search ...".localized()
     }
     func setupTableView() {
         tableView.dataSource = self
@@ -113,11 +115,11 @@ extension RepositoriesViewController: UITableViewDataSource, UITableViewDelegate
     func tableView( _ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
         let identifier = "\(String(describing: index))" as NSString
         return UIContextMenuConfiguration( identifier: identifier, previewProvider: nil) { [weak self] _ in
-            let bookmarkAction = UIAction(title: "Bookmark", image: UIImage(systemName: "bookmark.fill")) { _ in
+            let bookmarkAction = UIAction(title: Titles.bookmark, image: UIImage(systemName: "bookmark.fill")) { _ in
                 self?.saveRepos(indexPath: indexPath)
             }
             let safariAction = UIAction(
-                title: "Open In Safari",
+                title: Titles.urlTitle,
                 image: UIImage(systemName: "link")) { _ in
                 let repoURL = self?.repositoriesModel[indexPath.row].repositoryURL
                 let safariVC = SFSafariViewController(url: URL(string: repoURL ?? "")!)
@@ -125,7 +127,7 @@ extension RepositoriesViewController: UITableViewDataSource, UITableViewDelegate
             }
             
             let shareAction = UIAction(
-                title: "Share",
+                title: Titles.share,
                 image: UIImage(systemName: "square.and.arrow.up")) { _ in
                 let image = UIImage(systemName: "bell")
                 let repoURL = self?.repositoriesModel[indexPath.row].repositoryURL

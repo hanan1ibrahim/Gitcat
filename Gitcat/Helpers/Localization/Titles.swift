@@ -31,8 +31,6 @@ struct Titles {
     static let policyHeaderTitle = "Policy".localized()
     static let languageHeaderTitle = "Language".localized()
     static let accountHeaderTitle =   "Account".localized()
-    static let removeAllBookmarks    = "Remove All Bookmarks".localized()
-    static let removeAllRecords      = "Remove All Records".localized()
     
     //MARK:- Views Title Labels
     
@@ -49,14 +47,7 @@ struct Titles {
     static let resultsViewTitle =        "Results".localized()
     
     //MARK:- No Content Title Labels
-    
-    static let noUsers                   = "There aren't any users".localized()
-    static let noOrgs                   = "There aren't any orgs".localized()
-    static let noRepos                 = "There aren't any repos".localized()
-    static let noStarred                  = "There aren't any Starred".localized()
-    static let noBookmarks              = "There aren't any Bookmarks".localized()
-    static let noIssues                 = "There aren't any Issues".localized()
-    static let notLoggedInUser             = "Not Signed In"
+    static let notLoggedInUser             = "Not Signed In".localized()
     
     //MARK:- Before Search Title Labels
     static let searchForUsers           = "Search For Users".localized()
@@ -82,17 +73,15 @@ struct Titles {
     static let projectRepoTitle       = "Repo".localized()
     static let authenticatedModeTitle = "Authenticated User Mode".localized()
     static let guestModeTitle         = "Guest Mode".localized()
-    static let recentSearch           = "RECENT SEARCH".localized()
     
     //MARK:- Others Title Labels
     
     static let searchPlacholder      = " Search...".localized()
-    static let more                  = "More".localized()
 }
 
 extension String {
     func localized () -> String {
-        return NSLocalizedString(self, tableName: "Localizable", bundle: .main, value: self, comment: self
+        return NSLocalizedString(self, tableName: "localizable", bundle: .main, value: self, comment: self
         )
     }
 }

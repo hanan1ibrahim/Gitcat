@@ -37,13 +37,13 @@ class SettingsCollectionViewCell: UICollectionViewCell {
             }
     }
     func setDarkModeCell(indexPath: IndexPath) {
-        cellTitle.text = "Dark Mode"
+        cellTitle.text = Titles.darkMode
         cellButton.isHidden = true
         darkModeSwitch.isHidden = false
     }
     func setChangeLanguageCell(indexPath: IndexPath) {
-        cellTitle.text = "Change Language"
-        cellButton.setTitle("Change Language", for: .normal)
+        cellTitle.text = "Change Lanuages".localized()
+        cellButton.setTitle("Change Lanuages" .localized(), for: .normal)
         darkModeSwitch.isHidden = true
         cellButton.isHidden = false
         cellButton.backgroundColor = .blue
