@@ -13,6 +13,9 @@ enum Router {
     case repositoryAPIlink(String)
     case accessTokenAPIlink(String)
     case privateUserAPIlink
+    case privateUserFollowListAPIlink
+    case privateUserUnfollowAPIlink(user: String)
+    case privateUserFollowAPILink(user: String)
     
     var baseURL: String {
         switch self {
@@ -23,6 +26,12 @@ enum Router {
         case .accessTokenAPIlink:
             return "https://github.com"
         case .privateUserAPIlink:
+            return "https://api.github.com"
+        case .privateUserFollowListAPIlink:
+            return "https://api.github.com"
+        case .privateUserUnfollowAPIlink:
+            return "https://api.github.com"
+        case .privateUserFollowAPILink:
             return "https://api.github.com"
         }
     }
@@ -37,6 +46,12 @@ enum Router {
             return "/login/oauth/access_token"
         case .privateUserAPIlink:
             return "/user"
+        case .privateUserFollowListAPIlink:
+            return "/user/following"
+        case .privateUserUnfollowAPIlink(let user):
+            return "/user/following/\(user)"
+        case .privateUserFollowAPILink(let user):
+            return "/user/following/\(user)"
         }
     }
     
@@ -50,6 +65,12 @@ enum Router {
             return .post
         case .privateUserAPIlink:
             return .get
+        case .privateUserFollowListAPIlink:
+            return .get
+        case .privateUserUnfollowAPIlink:
+            return .delete
+        case .privateUserFollowAPILink:
+            return .put
         }
     }
     
@@ -67,6 +88,12 @@ enum Router {
             ]
         case .privateUserAPIlink:
            return nil
+        case .privateUserFollowListAPIlink:
+            return ["per_page": "30", "page": "1"]
+        case .privateUserUnfollowAPIlink:
+            return nil
+        case .privateUserFollowAPILink:
+            return nil
         }
     }
 }

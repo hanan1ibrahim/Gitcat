@@ -10,7 +10,7 @@ import Lottie
 
 class AnimationViewController: UIViewController {
     let animationView = AnimationView()
-    static let animation = "loadingspinner"
+    static let animation = "loader"
     var isLoggedIn: Bool {
         if TokenManager.shared.fetchAccessToken() != nil {
             return true

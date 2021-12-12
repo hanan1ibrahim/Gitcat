@@ -44,15 +44,34 @@ class ProfileViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         checkIfUserLoggedIn()
+        loadProfileDataFromSwiftyJSON()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        loadProfileDataFromSwiftyJSON()
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        loadProfileDataFromSwiftyJSON()
     }
     //MARK: - UI Functions
     func initUI() {
         initTitles()
         initCenterLabel()
         tableViewData()
+        gestureRecoginzer()
     }
     func initViewData() {
         fetchData()
+    }
+    func gestureRecoginzer() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(navigateToFollowers))
+        userFollowers.addGestureRecognizer(tapGesture)
+        userFollowers.isUserInteractionEnabled = true
+    }
+    @objc func navigateToFollowers() {
+        let followersVC = FollowingViewController.instaintiate(on: .mainView)
+        self.navigationController?.pushViewController(followersVC, animated: true)
     }
     func initCenterLabel() {
         conditionLabel.text = Titles.notLoggedInUser
@@ -72,6 +91,12 @@ class ProfileViewController: UIViewController {
             tableView.isHidden = true
             conditionLabel.isHidden = false
         }
+    }
+    func presentAlert(title: String, msg: String, btnTitle: String) {
+        let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        let action = UIAlertAction(title: btnTitle, style: .default)
+        alert.addAction(action)
+        self.present(alert, animated: true)
     }
     //MARK: - Data Functions
     func addTableCellsTitlesAndImages() {

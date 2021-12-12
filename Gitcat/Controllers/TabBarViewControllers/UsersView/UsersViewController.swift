@@ -73,17 +73,28 @@ class UsersViewController: UIViewController {
         spinner.startAnimating()
         let requestURL = Router.usersListAPIlink(query)
         afSession.request(requestURL).responseDecodable(of: Users.self, completionHandler: { response in
-                switch response.result {
-                case .success(_):
-                    guard let users = response.value else {return}
-                    self.usersModel = users.items
-                    self.tableView.reloadData()
-                    self.spinner.stopAnimating()
-                case .failure(let error):
-                    self.presentAlert(title: "Error", msg: error.localizedDescription, btnTitle: "Ok")
-                }
-            })
+            switch response.result {
+            case .success(_):
+                guard let users = response.value else {return}
+                self.usersModel = users.items
+                self.tableView.reloadData()
+                self.spinner.stopAnimating()
+            case .failure(let error):
+                self.presentAlert(title: "Error", msg: error.localizedDescription, btnTitle: "Ok")
+            }
+        })
+    }
+    func followUser(user: String) {
+        let requestURL = Router.privateUserFollowAPILink(user: user)
+        afSession.request(requestURL).responseJSON { respone in
+            switch respone.result {
+            case .success(_):
+                break
+            case .failure(let error):
+                self.presentAlert(title: "Error", msg: error.localizedDescription, btnTitle: "Ok")
+            }
         }
+    }
 }
 // MARK:- TableView
 extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
@@ -121,6 +132,9 @@ extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
             let bookmarkAction = UIAction(title: Titles.bookmark, image: UIImage(systemName: "bookmark.fill")) { _ in
                 self?.saveUserToBookmarks(indexPath: indexPath)
             }
+            let followAction = UIAction(title: Titles.follow, image: UIImage(systemName: "person.fill")) { _ in
+                self?.followUser(user: self?.usersModel[indexPath.row].userName ?? "")
+            }
             let safariAction = UIAction(
                 title: Titles.urlTitle,
                 image: UIImage(systemName: "link")) { _ in
@@ -138,7 +152,7 @@ extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
                 self?.present(sheetVC, animated: true)
             }
             
-            return UIMenu(title: "", image: nil, children: [safariAction ,bookmarkAction, shareAction])
+            return UIMenu(title: "", image: nil, children: [safariAction ,bookmarkAction, followAction, shareAction])
         }
     }
 }

@@ -63,6 +63,8 @@ struct Titles {
     static let openInSafari             = "Open with Safari".localized()
     static let cancel                = "Cancel".localized()
     static let bookmark              = "Bookmark".localized()
+    static let follow              = "Follow".localized()
+    static let unfollow              = "UnFollow".localized()
     static let urlTitle                   = "URL".localized()
 
     //MARK:- Home View Titles Labels
