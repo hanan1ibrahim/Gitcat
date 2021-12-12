@@ -22,7 +22,6 @@
 		EA5A25C527625BAF00DD4F79 /* Storyboad+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A25C427625BAF00DD4F79 /* Storyboad+Ext.swift */; };
 		EA5A25C827625BE800DD4F79 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A25C727625BE800DD4F79 /* TabBarViewController.swift */; };
 		EA5A25CB27625C4C00DD4F79 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A25CA27625C4C00DD4F79 /* AnimationViewController.swift */; };
-		EA5A25CD27625D0F00DD4F79 /* loadingspinner.json in Resources */ = {isa = PBXBuildFile; fileRef = EA5A25CC27625D0F00DD4F79 /* loadingspinner.json */; };
 		EA5A25D027625DCB00DD4F79 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A25CF27625DCB00DD4F79 /* ProfileViewController.swift */; };
 		EA5A25D727626B3F00DD4F79 /* PrivateUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A25D627626B3F00DD4F79 /* PrivateUsers.swift */; };
 		EA5A25D927626D8C00DD4F79 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A25D827626D8C00DD4F79 /* ProfileView.swift */; };
@@ -71,7 +70,6 @@
 		EA5A25C427625BAF00DD4F79 /* Storyboad+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboad+Ext.swift"; sourceTree = "<group>"; };
 		EA5A25C727625BE800DD4F79 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		EA5A25CA27625C4C00DD4F79 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
-		EA5A25CC27625D0F00DD4F79 /* loadingspinner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loadingspinner.json; sourceTree = "<group>"; };
 		EA5A25CF27625DCB00DD4F79 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		EA5A25D627626B3F00DD4F79 /* PrivateUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateUsers.swift; sourceTree = "<group>"; };
 		EA5A25D827626D8C00DD4F79 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -199,7 +197,6 @@
 			isa = PBXGroup;
 			children = (
 				EA615F5A276674B300332778 /* loader.json */,
-				EA5A25CC27625D0F00DD4F79 /* loadingspinner.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -474,7 +471,6 @@
 			files = (
 				EA5F6FDB275FD3FE00DAAAE8 /* UsersCell.xib in Resources */,
 				EA5F6FB5275FBE1600DAAAE8 /* LaunchScreen.storyboard in Resources */,
-				EA5A25CD27625D0F00DD4F79 /* loadingspinner.json in Resources */,
 				EA615F5127665FC300332778 /* localize.strings in Resources */,
 				EA5F6FB2275FBE1600DAAAE8 /* Assets.xcassets in Resources */,
 				EAD71D602763833900EA55FF /* SettingsCollectionViewCell.xib in Resources */,
