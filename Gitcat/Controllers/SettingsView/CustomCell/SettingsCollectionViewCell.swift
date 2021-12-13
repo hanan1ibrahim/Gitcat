@@ -46,6 +46,6 @@ class SettingsCollectionViewCell: UICollectionViewCell {
         cellButton.setTitle("Change Lanuages" .localized(), for: .normal)
         darkModeSwitch.isHidden = true
         cellButton.isHidden = false
-        cellButton.backgroundColor = .blue
+        cellButton.backgroundColor = .lightGray
     }
 }

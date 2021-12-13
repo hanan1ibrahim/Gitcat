@@ -41,7 +41,7 @@ class UsersViewController: UIViewController {
         view.addSubview(spinner)
     }
     func initData() {
-        getUsersList(query: "Hanan")
+        getUsersList(query: "Jawaher")
     }
     func configureUI() {
         title = Titles.usersViewTitle
@@ -169,7 +169,7 @@ extension UsersViewController: UISearchBarDelegate {
         tableView.isHidden = false
     }
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        getUsersList(query: "Hanan")
+        getUsersList(query: "Jawaher")
         tableView.isHidden = false
         searchLabel.isHidden = true
     }
