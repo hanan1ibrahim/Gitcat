@@ -80,8 +80,8 @@ struct AccessToken: Decodable {
 * UsersPage
 * SettingPage
 
-| Component        | Permissions | Behavior |
-| :---             |     :---:   |   ---:  |
+| Component        | Permissions | Behavu 
+| :---             |     ---   |   :---    |
 | AnimationPage    | public      | Frist page |
 | SignInPage       | anon only   | link to login, navigate to homepage after signIn.|
 | Users Page       | anon & user | List Github users  ,navigate us to safari web site.|
