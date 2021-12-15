@@ -80,15 +80,15 @@ struct AccessToken: Decodable {
 * UsersPage
 * SettingPage
 
-| Component        | Permissions | Behavior                                        |
-| :---             |     :---:   |                                           ---:  |
-| AnimationPage    | public      | Frist page                                      |
+| Component        | Permissions | Behavior |
+| :---             |     :---:   |   ---:  |
+| AnimationPage    | public      | Frist page |
 | SignInPage       | anon only   | link to login, navigate to homepage after signIn.|
-| Users Page       | anon & user | List Github users  ,navigate us to safari web site. |
-| RepositoriesPage | anon & user | List Github Repositories , navigate us to safari web site.  |
-| BookmarksPage    | anon & user | List users and repositories bookmarks, and the availability to delete. |
-| ProfilePage      | user only   | View user information appear on the app from GitHub.  | 
-| FollowingPage    | user only   | Following list appear on the app from GitHub.  |
+| Users Page       | anon & user | List Github users  ,navigate us to safari web site.|
+| RepositoriesPage | anon & user | List Github Repositories , navigate us to safari web site.|
+| BookmarksPage    | anon & user | List users and repositories bookmarks, and the availability to delete.|
+| ProfilePage      | user only   | View user information appear on the app from GitHub.| 
+| FollowingPage    | user only   | Following list appear on the app from GitHub.|
 | SettingPage      | anon & user | Change the app language and change between dark or light mode.|
 
 
