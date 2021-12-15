@@ -1,12 +1,12 @@
 ### Hi there, This is ***GitCat*** - iOS Native App and based on [Github REST API][website] 👋
 
 
-###Description: 
+# Description: 
 
        It is an application that simulates Github  website for Software Engineers allowing them to prefer repositories,  and important users accounts
    that help them to achieve what they want, and access them via safari link when user tap on the cell and share, follow and offline bookmark any user you want.
 
-#User Stories :
+# User Stories :
 
 * Animation view controller : As a user I want my app start with a beautiful animation that tell me the app us loading now.
 * SignIn  view controller: As a user I want to login with my GitHub account to the app and display my profile.
@@ -30,7 +30,7 @@ when we hold on the cell the app open 3 actions menu:
                          2- Dark Mode
 
 
-#Services:
+# Services:
 
 * Auth Service
     * auth.signin(user)
@@ -44,8 +44,8 @@ when we hold on the cell the app open 3 actions menu:
 
 
 
-#Server / Backend :
-##Models
+# Server / Backend :
+## Models
 
 User model
 {
@@ -69,7 +69,7 @@ struct AccessToken: Decodable {
 
 
 
-#Components
+# Components
 
 * AnimationPage 
 * SignInPage
@@ -105,7 +105,7 @@ struct AccessToken: Decodable {
 - Supporting Dark Mode.
 - Supporting Arabic Language 100%
 
- ##App Technologies:
+ ## App Technologies:
  
 * App Current Version: V1.0
 * Supported IOS : IOS 13 or above
