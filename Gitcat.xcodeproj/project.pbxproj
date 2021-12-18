@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		639C59759C32D621A7A8F76C /* Pods_Gitcat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D01CE35D809FC6F25FF5E70 /* Pods_Gitcat.framework */; };
+		E32425D3276E48C200220BE4 /* PrivateRepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32425D2276E48C200220BE4 /* PrivateRepositoriesViewController.swift */; };
+		E32425D5276E48E000220BE4 /* PrivateStarredReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32425D4276E48E000220BE4 /* PrivateStarredReposViewController.swift */; };
+		E32425D7276E48F300220BE4 /* PrivateOrgsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32425D6276E48F300220BE4 /* PrivateOrgsViewController.swift */; };
+		E32425D9276E4EC900220BE4 /* Orgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32425D8276E4EC900220BE4 /* Orgs.swift */; };
 		EA5A251F2761283B00DD4F79 /* UIVC+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A251E2761283B00DD4F79 /* UIVC+Ext.swift */; };
 		EA5A25222761289100DD4F79 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A25212761289100DD4F79 /* BookmarksViewController.swift */; };
 		EA5A25AF2762544100DD4F79 /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A25AE2762544100DD4F79 /* Interceptor.swift */; };
@@ -56,6 +60,10 @@
 		26D5E340963D42CE9E98D68C /* Pods-Gitcat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gitcat.debug.xcconfig"; path = "Target Support Files/Pods-Gitcat/Pods-Gitcat.debug.xcconfig"; sourceTree = "<group>"; };
 		7D01CE35D809FC6F25FF5E70 /* Pods_Gitcat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gitcat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4208D98E0B6A7435CFB3492 /* Pods-Gitcat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gitcat.release.xcconfig"; path = "Target Support Files/Pods-Gitcat/Pods-Gitcat.release.xcconfig"; sourceTree = "<group>"; };
+		E32425D2276E48C200220BE4 /* PrivateRepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateRepositoriesViewController.swift; sourceTree = "<group>"; };
+		E32425D4276E48E000220BE4 /* PrivateStarredReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateStarredReposViewController.swift; sourceTree = "<group>"; };
+		E32425D6276E48F300220BE4 /* PrivateOrgsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateOrgsViewController.swift; sourceTree = "<group>"; };
+		E32425D8276E4EC900220BE4 /* Orgs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orgs.swift; sourceTree = "<group>"; };
 		EA5A251E2761283B00DD4F79 /* UIVC+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVC+Ext.swift"; sourceTree = "<group>"; };
 		EA5A25212761289100DD4F79 /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		EA5A25AE2762544100DD4F79 /* Interceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interceptor.swift; sourceTree = "<group>"; };
@@ -122,6 +130,16 @@
 				7D01CE35D809FC6F25FF5E70 /* Pods_Gitcat.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E32425D1276E488C00220BE4 /* ProfileViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				E32425D2276E48C200220BE4 /* PrivateRepositoriesViewController.swift */,
+				E32425D4276E48E000220BE4 /* PrivateStarredReposViewController.swift */,
+				E32425D6276E48F300220BE4 /* PrivateOrgsViewController.swift */,
+			);
+			path = ProfileViewCells;
 			sourceTree = "<group>";
 		};
 		E3D6307F19F9379280990286 /* Pods */ = {
@@ -204,6 +222,7 @@
 		EA5A25D127625DCE00DD4F79 /* ProfileView */ = {
 			isa = PBXGroup;
 			children = (
+				E32425D1276E488C00220BE4 /* ProfileViewCells */,
 				EA5A25CF27625DCB00DD4F79 /* ProfileViewController.swift */,
 			);
 			path = ProfileView;
@@ -312,6 +331,7 @@
 				EA5A25D627626B3F00DD4F79 /* PrivateUsers.swift */,
 				EA5A25D827626D8C00DD4F79 /* ProfileView.swift */,
 				EA615F58276667B000332778 /* Following.swift */,
+				E32425D8276E4EC900220BE4 /* Orgs.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -550,8 +570,12 @@
 				EA5A25C827625BE800DD4F79 /* TabBarViewController.swift in Sources */,
 				EA5A25BB2762560600DD4F79 /* Token.swift in Sources */,
 				EA5F6FB0275FBE1500DAAAE8 /* Gitcat.xcdatamodeld in Sources */,
+				E32425D7276E48F300220BE4 /* PrivateOrgsViewController.swift in Sources */,
 				EA5F6FDD275FD4DB00DAAAE8 /* TableView+Ext.swift in Sources */,
+				E32425D5276E48E000220BE4 /* PrivateStarredReposViewController.swift in Sources */,
+				E32425D9276E4EC900220BE4 /* Orgs.swift in Sources */,
 				EA5F6FE3275FD75600DAAAE8 /* ReposCell.swift in Sources */,
+				E32425D3276E48C200220BE4 /* PrivateRepositoriesViewController.swift in Sources */,
 				EA5A25B22762551600DD4F79 /* AuthConstants.swift in Sources */,
 				EA5A251F2761283B00DD4F79 /* UIVC+Ext.swift in Sources */,
 				EA5A25B92762558700DD4F79 /* SecureStore.swift in Sources */,

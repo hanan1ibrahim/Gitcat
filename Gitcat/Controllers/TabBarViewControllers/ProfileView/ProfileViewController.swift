@@ -147,6 +147,16 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.row == 0 {
+            let vc = PrivateRepositoriesViewController.instaintiate(on: .mainView)
+            navigationController?.pushViewController(vc, animated: true)
+        } else if indexPath.row == 1 {
+            let vc = PrivateStarredReposViewController.instaintiate(on: .mainView)
+            navigationController?.pushViewController(vc, animated: true)
+        } else {
+            let vc = PrivateOrgsViewController.instaintiate(on: .mainView)
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 10

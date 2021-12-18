@@ -16,6 +16,9 @@ enum Router {
     case privateUserFollowListAPIlink
     case privateUserUnfollowAPIlink(user: String)
     case privateUserFollowAPILink(user: String)
+    case privateReposAPILink
+    case privateStarredReposAPILink
+    case privateOrgsAPILinl
     
     var baseURL: String {
         switch self {
@@ -32,6 +35,12 @@ enum Router {
         case .privateUserUnfollowAPIlink:
             return "https://api.github.com"
         case .privateUserFollowAPILink:
+            return "https://api.github.com"
+        case .privateReposAPILink:
+            return "https://api.github.com"
+        case .privateStarredReposAPILink:
+            return "https://api.github.com"
+        case .privateOrgsAPILinl:
             return "https://api.github.com"
         }
     }
@@ -52,6 +61,12 @@ enum Router {
             return "/user/following/\(user)"
         case .privateUserFollowAPILink(let user):
             return "/user/following/\(user)"
+        case .privateReposAPILink:
+            return "/user/repos"
+        case .privateStarredReposAPILink:
+            return "/user/starred"
+        case .privateOrgsAPILinl:
+            return "/user/orgs"
         }
     }
     
@@ -71,6 +86,12 @@ enum Router {
             return .delete
         case .privateUserFollowAPILink:
             return .put
+        case .privateReposAPILink:
+            return .get
+        case .privateStarredReposAPILink:
+            return .get
+        case .privateOrgsAPILinl:
+            return .get
         }
     }
     
@@ -93,6 +114,12 @@ enum Router {
         case .privateUserUnfollowAPIlink:
             return nil
         case .privateUserFollowAPILink:
+            return nil
+        case .privateReposAPILink:
+            return nil
+        case .privateStarredReposAPILink:
+            return nil
+        case .privateOrgsAPILinl:
             return nil
         }
     }
