@@ -12,6 +12,7 @@
 		E32425D5276E48E000220BE4 /* PrivateStarredReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32425D4276E48E000220BE4 /* PrivateStarredReposViewController.swift */; };
 		E32425D7276E48F300220BE4 /* PrivateOrgsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32425D6276E48F300220BE4 /* PrivateOrgsViewController.swift */; };
 		E32425D9276E4EC900220BE4 /* Orgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32425D8276E4EC900220BE4 /* Orgs.swift */; };
+		E32425DC276E522800220BE4 /* FollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32425DB276E522800220BE4 /* FollowersViewController.swift */; };
 		EA5A251F2761283B00DD4F79 /* UIVC+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A251E2761283B00DD4F79 /* UIVC+Ext.swift */; };
 		EA5A25222761289100DD4F79 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A25212761289100DD4F79 /* BookmarksViewController.swift */; };
 		EA5A25AF2762544100DD4F79 /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A25AE2762544100DD4F79 /* Interceptor.swift */; };
@@ -64,6 +65,7 @@
 		E32425D4276E48E000220BE4 /* PrivateStarredReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateStarredReposViewController.swift; sourceTree = "<group>"; };
 		E32425D6276E48F300220BE4 /* PrivateOrgsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateOrgsViewController.swift; sourceTree = "<group>"; };
 		E32425D8276E4EC900220BE4 /* Orgs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orgs.swift; sourceTree = "<group>"; };
+		E32425DB276E522800220BE4 /* FollowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersViewController.swift; sourceTree = "<group>"; };
 		EA5A251E2761283B00DD4F79 /* UIVC+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVC+Ext.swift"; sourceTree = "<group>"; };
 		EA5A25212761289100DD4F79 /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		EA5A25AE2762544100DD4F79 /* Interceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interceptor.swift; sourceTree = "<group>"; };
@@ -140,6 +142,14 @@
 				E32425D6276E48F300220BE4 /* PrivateOrgsViewController.swift */,
 			);
 			path = ProfileViewCells;
+			sourceTree = "<group>";
+		};
+		E32425DA276E51F900220BE4 /* FollowingView */ = {
+			isa = PBXGroup;
+			children = (
+				E32425DB276E522800220BE4 /* FollowersViewController.swift */,
+			);
+			path = FollowingView;
 			sourceTree = "<group>";
 		};
 		E3D6307F19F9379280990286 /* Pods */ = {
@@ -281,6 +291,7 @@
 		EA5F6FBD275FBEBE00DAAAE8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E32425DA276E51F900220BE4 /* FollowingView */,
 				EA5A25C927625C4300DD4F79 /* AnimationView */,
 				EA5A25BE27625B0500DD4F79 /* LoginView */,
 				EAD71D5627637B6200EA55FF /* TabBarViewControllers */,
@@ -585,6 +596,7 @@
 				EA5A25D727626B3F00DD4F79 /* PrivateUsers.swift in Sources */,
 				EA5A25CB27625C4C00DD4F79 /* AnimationViewController.swift in Sources */,
 				EA5A25B72762558700DD4F79 /* SecureStoreError.swift in Sources */,
+				E32425DC276E522800220BE4 /* FollowersViewController.swift in Sources */,
 				EA5F6FF02760B11B00DAAAE8 /* Repository.swift in Sources */,
 				EA615F59276667B000332778 /* Following.swift in Sources */,
 			);

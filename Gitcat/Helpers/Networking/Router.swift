@@ -19,6 +19,7 @@ enum Router {
     case privateReposAPILink
     case privateStarredReposAPILink
     case privateOrgsAPILinl
+    case privateFollwersAPIlink
     
     var baseURL: String {
         switch self {
@@ -41,6 +42,8 @@ enum Router {
         case .privateStarredReposAPILink:
             return "https://api.github.com"
         case .privateOrgsAPILinl:
+            return "https://api.github.com"
+        case .privateFollwersAPIlink:
             return "https://api.github.com"
         }
     }
@@ -65,6 +68,8 @@ enum Router {
             return "/user/repos"
         case .privateStarredReposAPILink:
             return "/user/starred"
+        case .privateFollwersAPIlink:
+            return "user/followers"
         case .privateOrgsAPILinl:
             return "/user/orgs"
         }
@@ -92,6 +97,8 @@ enum Router {
             return .get
         case .privateOrgsAPILinl:
             return .get
+        case .privateFollwersAPIlink:
+            return .get
         }
     }
     
@@ -116,6 +123,8 @@ enum Router {
         case .privateUserFollowAPILink:
             return nil
         case .privateReposAPILink:
+            return nil
+        case .privateFollwersAPIlink:
             return nil
         case .privateStarredReposAPILink:
             return nil

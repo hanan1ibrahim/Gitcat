@@ -69,9 +69,29 @@ class ProfileViewController: UIViewController {
         userFollowers.addGestureRecognizer(tapGesture)
         userFollowers.isUserInteractionEnabled = true
     }
+    typealias ActionCompletion = ((UIAlertAction) -> Void)?
+
+    func sheetWithTwoOptions(title: String, msg: String,
+                               btnsTitles: [String],
+                                btn1Action: ActionCompletion = nil,
+                                btn2Action: ActionCompletion = nil)  {
+         let actionSheet = UIAlertController(title: title, message: msg, preferredStyle: .actionSheet)
+         let actBtn1 = UIAlertAction(title: btnsTitles[0], style: .default, handler: btn1Action)
+         let actBtn2 = UIAlertAction(title: btnsTitles[1], style: .default, handler: btn2Action)
+        let cancelBtn = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
+         actionSheet.addAction(actBtn1)
+         actionSheet.addAction(actBtn2)
+        actionSheet.addAction(cancelBtn)
+         self.present(actionSheet, animated: true)
+     }
     @objc func navigateToFollowers() {
-        let followersVC = FollowingViewController.instaintiate(on: .mainView)
-        self.navigationController?.pushViewController(followersVC, animated: true)
+        sheetWithTwoOptions(title: "Choose", msg: "", btnsTitles: ["Followers", "Following"]) { alert in
+            let followersVC = FollowersViewController.instaintiate(on: .mainView)
+            self.navigationController?.pushViewController(followersVC, animated: true)
+        } btn2Action: { alert in
+            let followersVC = FollowingViewController.instaintiate(on: .mainView)
+            self.navigationController?.pushViewController(followersVC, animated: true)
+        }
     }
     func initCenterLabel() {
         conditionLabel.text = Titles.notLoggedInUser
@@ -98,6 +118,7 @@ class ProfileViewController: UIViewController {
         alert.addAction(action)
         self.present(alert, animated: true)
     }
+
     //MARK: - Data Functions
     func addTableCellsTitlesAndImages() {
         privateProfileModel.append(ProfileTableData(cellTitle: "\(Titles.repositoriesViewTitle)", cellImage: "Repositories" ))
