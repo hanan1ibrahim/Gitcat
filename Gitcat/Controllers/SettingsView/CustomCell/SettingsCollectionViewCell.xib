@@ -23,10 +23,10 @@
                         <rect key="frame" x="2.5" y="-7.5" width="180" height="260"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="uNg-Qc-6F1">
-                                <rect key="frame" x="10" y="15" width="160" height="225"/>
+                                <rect key="frame" x="10" y="15" width="160" height="145"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cell Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWS-Yj-LLu">
-                                        <rect key="frame" x="0.0" y="0.0" width="160" height="52"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="101"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" name="Color"/>
                                         <nil key="highlightedColor"/>
@@ -35,7 +35,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KeW-yL-gCM">
-                                        <rect key="frame" x="0.0" y="61" width="160" height="35"/>
+                                        <rect key="frame" x="0.0" y="110" width="160" height="35"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="bJU-gr-gU8"/>
@@ -58,18 +58,15 @@
                                             <action selector="pressCellButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="mj4-Ld-rv9"/>
                                         </connections>
                                     </button>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2BF-38-GGx">
-                                        <rect key="frame" x="0.0" y="105" width="162" height="120"/>
-                                        <connections>
-                                            <action selector="darkModeAction:" destination="gTV-IL-0wX" eventType="valueChanged" id="P2t-Xl-Qza"/>
-                                        </connections>
-                                    </switch>
                                 </subviews>
                                 <color key="backgroundColor" name="ViewsColorBallet"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </stackView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VtQ-ON-wuZ">
+                                <rect key="frame" x="65" y="182" width="49" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" name="ViewsColorBallet"/>
                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -77,8 +74,12 @@
                             <constraint firstItem="uNg-Qc-6F1" firstAttribute="top" secondItem="SvS-lk-xfv" secondAttribute="top" constant="15" id="17q-tx-8HN"/>
                             <constraint firstItem="uNg-Qc-6F1" firstAttribute="leading" secondItem="SvS-lk-xfv" secondAttribute="leading" constant="10" id="3h7-5Z-GPU"/>
                             <constraint firstAttribute="width" constant="180" id="CD0-VO-Izr"/>
+                            <constraint firstItem="VtQ-ON-wuZ" firstAttribute="top" secondItem="uNg-Qc-6F1" secondAttribute="bottom" constant="22" id="PWs-D4-IQa"/>
+                            <constraint firstItem="VtQ-ON-wuZ" firstAttribute="leading" secondItem="SvS-lk-xfv" secondAttribute="leading" constant="65" id="et6-Mq-yyf"/>
                             <constraint firstAttribute="trailing" secondItem="uNg-Qc-6F1" secondAttribute="trailing" constant="10" id="gJ1-Kh-p9x"/>
-                            <constraint firstAttribute="bottom" secondItem="uNg-Qc-6F1" secondAttribute="bottom" constant="20" id="iAs-W2-m6h"/>
+                            <constraint firstAttribute="bottom" secondItem="VtQ-ON-wuZ" secondAttribute="bottom" constant="47" id="hyb-h7-Taa"/>
+                            <constraint firstAttribute="bottom" secondItem="uNg-Qc-6F1" secondAttribute="bottom" constant="100" id="iAs-W2-m6h"/>
+                            <constraint firstAttribute="trailing" secondItem="VtQ-ON-wuZ" secondAttribute="trailing" constant="68" id="n1z-ss-DOl"/>
                             <constraint firstAttribute="height" constant="260" id="wMb-08-eA6"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -110,7 +111,7 @@
                 <outlet property="catContentView" destination="SvS-lk-xfv" id="sZa-x4-vfc"/>
                 <outlet property="cellButton" destination="KeW-yL-gCM" id="X5H-u4-hfA"/>
                 <outlet property="cellTitle" destination="gWS-Yj-LLu" id="zhC-UD-3St"/>
-                <outlet property="darkModeSwitch" destination="2BF-38-GGx" id="c0P-hy-ctk"/>
+                <outlet property="darkModeSwitch" destination="VtQ-ON-wuZ" id="Rw7-q6-bwv"/>
             </connections>
             <point key="canvasLocation" x="187" y="83"/>
         </collectionViewCell>
