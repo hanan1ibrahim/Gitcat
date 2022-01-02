@@ -76,6 +76,8 @@ class FollowingViewController: UIViewController {
                 }
             })
         }
+    
+    // MARK:-unfollowUser
     func unfollowUser(user: String) {
         spinner.startAnimating()
         afSession.request(Router.privateUserUnfollowAPIlink(user: user)).responseJSON { response in

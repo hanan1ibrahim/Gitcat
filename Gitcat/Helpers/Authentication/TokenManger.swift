@@ -14,6 +14,7 @@ class TokenManager {
         return Session(
             interceptor: interceptor)
     }()
+    
     func fetchAccessToken(accessToken: String, completion: @escaping (Bool) -> Void) {
         afSession.request(Router.accessTokenAPIlink(accessToken))
             .responseDecodable(of: AccessToken.self) { response in
@@ -22,6 +23,7 @@ class TokenManager {
                 completion(true)
             }
     }
+    
     let secureStore: SecureStore = {
         let accessTokenQueryable = GenericPasswordQueryable(service: "GitHubService")
         return SecureStore(secureStoreQueryable: accessTokenQueryable)

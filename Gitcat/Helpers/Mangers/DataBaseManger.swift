@@ -19,7 +19,7 @@ class DataBaseManger {
             }
             completion(result)
         } catch {
-            //
+           
         }
     }
     
@@ -28,7 +28,7 @@ class DataBaseManger {
         do {
             try context.save()
         } catch {
-            //
+            
         }
     }
 }

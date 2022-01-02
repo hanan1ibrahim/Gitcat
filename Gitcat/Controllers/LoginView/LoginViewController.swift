@@ -57,9 +57,10 @@ class LoginViewController: UIViewController {
     
     @IBAction func signIn(_ sender: Any) {
         // vibaration when sign in
+        
         let sheet = UIAlertController(title: "", message: Titles.makeSure , preferredStyle: .actionSheet)
         sheet.addAction(UIAlertAction(title: Titles.signInWithGithubTitle, style: .default, handler: {_ in
-            // call authentication method
+        // call authentication method
             self.getGitHubAccessToken ()
         }))
         // sheet alert between guest and authenticated member

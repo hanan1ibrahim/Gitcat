@@ -271,7 +271,7 @@
 				EA5F6FBC275FBEB400DAAAE8 /* AppDelegate */,
 				EA5F6FC4275FC02800DAAAE8 /* Models */,
 				EA5F6FBD275FBEBE00DAAAE8 /* Controllers */,
-				EA5F6FBE275FBED700DAAAE8 /* Storyboards */,
+				EA5F6FBE275FBED700DAAAE8 /* Views */,
 				EA5F6FBF275FBEE400DAAAE8 /* Assets */,
 				EA5F6FC0275FBEF000DAAAE8 /* Helpers */,
 				EA5F6FB6275FBE1600DAAAE8 /* Info.plist */,
@@ -301,13 +301,13 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		EA5F6FBE275FBED700DAAAE8 /* Storyboards */ = {
+		EA5F6FBE275FBED700DAAAE8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				EA5F6FAB275FBE1500DAAAE8 /* Main.storyboard */,
 				EA5F6FB3275FBE1600DAAAE8 /* LaunchScreen.storyboard */,
 			);
-			path = Storyboards;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		EA5F6FBF275FBEE400DAAAE8 /* Assets */ = {

@@ -121,9 +121,9 @@ class ProfileViewController: UIViewController {
 
     //MARK: - Data Functions
     func addTableCellsTitlesAndImages() {
-        privateProfileModel.append(ProfileTableData(cellTitle: "\(Titles.repositoriesViewTitle)", cellImage: "Repositories" ))
-        privateProfileModel.append(ProfileTableData(cellTitle: "\(Titles.starredViewTitle)", cellImage: "Startted" ))
-        privateProfileModel.append(ProfileTableData(cellTitle: "\(Titles.organizationsViewTitle)", cellImage: "Organizations"))
+        privateProfileModel.append(ProfileTableData(cellTitle: "\(Titles.repositoriesViewTitle)", clllImage: "Repositories" ))
+        privateProfileModel.append(ProfileTableData(cellTitle: "\(Titles.starredViewTitle)", clllImage: "Startted" ))
+        privateProfileModel.append(ProfileTableData(cellTitle: "\(Titles.organizationsViewTitle)", clllImage: "Organizations"))
     }
     func loadProfileDataFromSwiftyJSON() {
         let requestURL = Router.privateUserAPIlink
@@ -161,7 +161,7 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath)
         let profileModel = privateProfileModel[indexPath.row]
         cell.textLabel?.text = profileModel.cellTitle
-        cell.imageView?.image = UIImage(named: profileModel.cellImage)
+        cell.imageView?.image = UIImage(named: profileModel.clllImage)
         cell.imageView?.layer.cornerRadius = 10
         cell.imageView?.clipsToBounds = true
         return cell

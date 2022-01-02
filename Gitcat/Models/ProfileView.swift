@@ -9,5 +9,5 @@ import Foundation
 
 struct ProfileTableData {
     let cellTitle: String
-    let cellImage: String
+    let clllImage: String
 }

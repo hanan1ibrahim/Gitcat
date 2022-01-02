@@ -155,5 +155,6 @@ extension RepositoriesViewController: UISearchBarDelegate {
         getReposList(query: "language:Swift")
         tableView.isHidden = false
         searchLabel.isHidden = true
+        
     }
 }

@@ -26,7 +26,7 @@
                                 <rect key="frame" x="10" y="15" width="160" height="145"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cell Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWS-Yj-LLu">
-                                        <rect key="frame" x="0.0" y="0.0" width="160" height="101"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="145"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" name="Color"/>
                                         <nil key="highlightedColor"/>
@@ -34,30 +34,6 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KeW-yL-gCM">
-                                        <rect key="frame" x="0.0" y="110" width="160" height="35"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="bJU-gr-gU8"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                        <color key="tintColor" systemColor="labelColor"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Cell Action"/>
-                                        <buttonConfiguration key="configuration" style="gray">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Change Language">
-                                                    <attributes>
-                                                        <font key="NSFont" metaFont="menu" size="14"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="pressCellButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="mj4-Ld-rv9"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" name="ViewsColorBallet"/>
                                 <userDefinedRuntimeAttributes>
@@ -66,15 +42,38 @@
                             </stackView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VtQ-ON-wuZ">
                                 <rect key="frame" x="65" y="182" width="49" height="31"/>
+                                <connections>
+                                    <action selector="darkModeAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="sUs-Ad-VtI"/>
+                                </connections>
                             </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KeW-yL-gCM">
+                                <rect key="frame" x="10" y="204" width="160" height="35"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="bJU-gr-gU8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Cell Action"/>
+                                <buttonConfiguration key="configuration" style="gray">
+                                    <attributedString key="attributedTitle"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="pressCellButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="mj4-Ld-rv9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="ViewsColorBallet"/>
                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="uNg-Qc-6F1" firstAttribute="top" secondItem="SvS-lk-xfv" secondAttribute="top" constant="15" id="17q-tx-8HN"/>
+                            <constraint firstItem="KeW-yL-gCM" firstAttribute="top" secondItem="uNg-Qc-6F1" secondAttribute="bottom" constant="44" id="2Gf-hV-aVN"/>
                             <constraint firstItem="uNg-Qc-6F1" firstAttribute="leading" secondItem="SvS-lk-xfv" secondAttribute="leading" constant="10" id="3h7-5Z-GPU"/>
                             <constraint firstAttribute="width" constant="180" id="CD0-VO-Izr"/>
+                            <constraint firstItem="KeW-yL-gCM" firstAttribute="leading" secondItem="uNg-Qc-6F1" secondAttribute="leading" id="M1J-ty-5Wz"/>
                             <constraint firstItem="VtQ-ON-wuZ" firstAttribute="top" secondItem="uNg-Qc-6F1" secondAttribute="bottom" constant="22" id="PWs-D4-IQa"/>
+                            <constraint firstItem="KeW-yL-gCM" firstAttribute="trailing" secondItem="uNg-Qc-6F1" secondAttribute="trailing" id="Z3S-hD-F84"/>
                             <constraint firstItem="VtQ-ON-wuZ" firstAttribute="leading" secondItem="SvS-lk-xfv" secondAttribute="leading" constant="65" id="et6-Mq-yyf"/>
                             <constraint firstAttribute="trailing" secondItem="uNg-Qc-6F1" secondAttribute="trailing" constant="10" id="gJ1-Kh-p9x"/>
                             <constraint firstAttribute="bottom" secondItem="VtQ-ON-wuZ" secondAttribute="bottom" constant="47" id="hyb-h7-Taa"/>
@@ -113,7 +112,7 @@
                 <outlet property="cellTitle" destination="gWS-Yj-LLu" id="zhC-UD-3St"/>
                 <outlet property="darkModeSwitch" destination="VtQ-ON-wuZ" id="Rw7-q6-bwv"/>
             </connections>
-            <point key="canvasLocation" x="187" y="83"/>
+            <point key="canvasLocation" x="186.23188405797103" y="82.700892857142847"/>
         </collectionViewCell>
     </objects>
     <resources>

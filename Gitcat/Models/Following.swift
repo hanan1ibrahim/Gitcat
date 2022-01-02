@@ -1,10 +1,9 @@
 //
-//  Following.swift
+// Following.swift
 //  Gitcat
 //
-//  Created by Ali Fayed on 12/12/2021.
+//  Created by Hanan Ibrahim on 07/12/2021.
 //
-
 import Foundation
 
 struct Following {

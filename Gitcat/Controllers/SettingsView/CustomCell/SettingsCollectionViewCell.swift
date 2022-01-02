@@ -1,6 +1,6 @@
 //
-//  MoreCollectionsViewCell.swift
-//  Nakd
+//  SettingsCollectionViewCell.swift
+//  GitCat
 //
 //  Created by Hanan Ibrahim on 07/12/2021.
 //
@@ -15,7 +15,7 @@ class SettingsCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         cellButton.layer.cornerRadius = 10
-        catContentView.layer.cornerRadius = 10
+        catContentView.layer.cornerRadius = 40
         darkModeSwitch.isHidden = true
         cellButton.isHidden = true
     }
@@ -43,7 +43,8 @@ class SettingsCollectionViewCell: UICollectionViewCell {
     }
     func setChangeLanguageCell(indexPath: IndexPath) {
         cellTitle.text = "Change Lanuages".localized()
-        cellButton.setTitle("Change Lanuages" .localized(), for: .normal)
+        cellTitle.font = UIFont(name: "Avenir-Light", size: 14.0)
+        cellButton.setTitle("Change" .localized(), for: .normal)
         darkModeSwitch.isHidden = true
         cellButton.isHidden = false
         cellButton.backgroundColor = .lightGray
