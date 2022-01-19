@@ -14,11 +14,12 @@
 "More"                = "المزيد";
 "Share"               = "المشاركه";
 "Change Lanuages"     = "تغيير اللغه";
+"Go to settings"     = "انتقل الى الاعدادات";
 // Settings
 
 "Dark Mode"           = "الوضع الليلي";
 "Log Out"             = "تسجيل الخروج";
-
+"Log In"             = "تسجيل الدخول";
 // Welcome Screen
 
 "Sign in with GitHub" = "سجل ب Github";
@@ -37,6 +38,7 @@
 "Login Options"       = "خيارات التسجيل!";
 "Profile" = "الملف الشخصي";
 "Organizations" = "المنظمات";
+"Starred" = "المفضلة";
 "Search For users." = "البحث عن عضو";
 "Search For repos." = "البحث عن مستودع";
 "Search For saved" = "البحث عن التفضيلات";

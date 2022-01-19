@@ -43,8 +43,8 @@ class SettingsCollectionViewCell: UICollectionViewCell {
     }
     func setChangeLanguageCell(indexPath: IndexPath) {
         cellTitle.text = "Change Lanuages".localized()
-        cellTitle.font = UIFont(name: "Avenir-Light", size: 14.0)
-        cellButton.setTitle("Change" .localized(), for: .normal)
+//        cellTitle.font = UIFont(name: "Avenir-Light", size: 14.0)
+        cellButton.setTitle("Go to settings" .localized(), for: .normal)
         darkModeSwitch.isHidden = true
         cellButton.isHidden = false
         cellButton.backgroundColor = .lightGray

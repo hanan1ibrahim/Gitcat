@@ -23,10 +23,10 @@ class SettingsViewController: UIViewController {
     }
     func checkLoginStatus() {
         if isLoggedIn {
-            logOutButton.title = "Sign Out"
+            logOutButton.title = "Log Out".localized()
             logOutButton.tintColor = .red
         } else {
-            logOutButton.title = "Sign In"
+            logOutButton.title = "log In".localized()
         }
     }
     func collectionData() {
