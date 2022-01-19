@@ -10,9 +10,9 @@ import Alamofire
 import SafariServices
 
 class PrivateRepositoriesViewController: UIViewController {
-    //MARK:- IBOutlets
+    // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
-    //MARK:- Varibles
+    // MARK: - Varibles
     let spinner = UIActivityIndicatorView()
     let afSession: Session = {
         let interceptor = RequestIntercptor()
@@ -20,7 +20,7 @@ class PrivateRepositoriesViewController: UIViewController {
             interceptor: interceptor)
     }()
     var repositoriesModel = [Repository]()
-    //MARK:- LifeCycle
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -28,7 +28,7 @@ class PrivateRepositoriesViewController: UIViewController {
         initData()
         configureUI()
     }
-    //MARK:- Functions
+    // MARK: - Functions
     func loadingIndicator() {
         spinner.style = UIActivityIndicatorView.Style.large
         spinner.center = view.center
@@ -67,7 +67,8 @@ class PrivateRepositoriesViewController: UIViewController {
         })
     }
 }
-// MARK:- TableView
+
+// MARK: - TableView
 extension PrivateRepositoriesViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         repositoriesModel.count

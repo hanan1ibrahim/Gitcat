@@ -10,9 +10,10 @@ import Alamofire
 import SafariServices
 
 class PrivateStarredReposViewController: UIViewController {
-    //MARK:- IBOutlets
+    // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
-    //MARK:- Varibles
+   
+    // MARK: - Varibles
     let spinner = UIActivityIndicatorView()
     let afSession: Session = {
         let interceptor = RequestIntercptor()
@@ -20,7 +21,8 @@ class PrivateStarredReposViewController: UIViewController {
             interceptor: interceptor)
     }()
     var repositoriesModel = [Repository]()
-    //MARK:- LifeCycle
+    // MARK: - LifeCycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -28,7 +30,7 @@ class PrivateStarredReposViewController: UIViewController {
         initData()
         configureUI()
     }
-    //MARK:- Functions
+    // MARK: - Functions
     func loadingIndicator() {
         spinner.style = UIActivityIndicatorView.Style.large
         spinner.center = view.center
@@ -67,7 +69,7 @@ class PrivateStarredReposViewController: UIViewController {
         })
     }
 }
-// MARK:- TableView
+ // MARK: - TableView
 extension PrivateStarredReposViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         repositoriesModel.count

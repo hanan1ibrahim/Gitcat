@@ -11,10 +11,10 @@ import SafariServices
 import CoreData
 
 class UsersViewController: UIViewController {
-    //MARK:- IBOutlets
+// MARK: - IBOutlets
     @IBOutlet weak var searchLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    //MARK:- Varibles
+// MARK: - Varibels
     let afSession: Session = {
         let interceptor = RequestIntercptor()
         return Session(
@@ -24,7 +24,7 @@ class UsersViewController: UIViewController {
     let spinner = UIActivityIndicatorView()
     var searchController = UISearchController(searchResultsController: nil)
     var usersModel = [User]()
-    //MARK:- LifeCycle
+// MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -34,7 +34,7 @@ class UsersViewController: UIViewController {
         setupSearchController(search: searchController)
         searchController.searchBar.placeholder = "Search ...".localized()
     }
-    //MARK:- Functions
+// MARK: - Functions
     func loadingIndicator() {
         spinner.style = UIActivityIndicatorView.Style.large
         spinner.center = view.center
@@ -96,7 +96,7 @@ class UsersViewController: UIViewController {
         }
     }
 }
-// MARK:- TableView
+// MARK: - TableView
 extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         1
@@ -156,7 +156,7 @@ extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
 }
-// MARK:- SearchBar
+// MARK: - SearchBar
 extension UsersViewController: UISearchBarDelegate {
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         tableView.isHidden = true

@@ -9,6 +9,8 @@ import UIKit
 import Kingfisher
 
 class ReposCell: UITableViewCell {
+    
+// MARK: - IBOutlets
     @IBOutlet weak var userRepoName: UILabel!
     @IBOutlet weak var userRepoDescription: UILabel!
     @IBOutlet weak var userRepoStars: UILabel!
@@ -16,6 +18,7 @@ class ReposCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+// MARK: - Function
     func cellData(with model: SavedRepositories) {
         self.userRepoName?.text = model.repoName
         self.userRepoDescription?.text = model.repoDescreipion

@@ -116,7 +116,7 @@ class BookmarksViewController: UIViewController {
         noBookmarksLabelState()
     }
 }
-//MARK:- TableView
+// MARK: -TableView
 extension BookmarksViewController: UITableViewDelegate , UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -134,10 +134,12 @@ extension BookmarksViewController: UITableViewDelegate , UITableViewDataSource {
         case 0:
             let cell = tableView.dequeue() as UsersCell
             cell.cellData(with: bookmarkedUsers[indexPath.row])
+            cell.accessoryType = .disclosureIndicator
             return cell
         default:
             let cell = tableView.dequeue() as ReposCell
             cell.cellData(with: bookmarkedRepos[indexPath.row])
+            cell.accessoryType = .disclosureIndicator
             return cell
         }
     }

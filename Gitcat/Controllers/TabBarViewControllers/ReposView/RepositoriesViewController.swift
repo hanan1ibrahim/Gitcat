@@ -11,10 +11,10 @@ import SafariServices
 import CoreData
 
 class RepositoriesViewController: UIViewController {
-    //MARK:- IBOutlets
+    // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchLabel: UILabel!
-    //MARK:- Varibles
+    // MARK: - Varibles
     let spinner = UIActivityIndicatorView()
     let afSession: Session = {
         let interceptor = RequestIntercptor()
@@ -24,7 +24,7 @@ class RepositoriesViewController: UIViewController {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var searchController = UISearchController(searchResultsController: nil)
     var repositoriesModel = [Repository]()
-    //MARK:- LifeCycle
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -33,7 +33,8 @@ class RepositoriesViewController: UIViewController {
         setupSearchController(search: searchController)
         configureUI()
     }
-    //MARK:- Functions
+    // MARK: - Functions
+
     func loadingIndicator() {
         spinner.style = UIActivityIndicatorView.Style.large
         spinner.center = view.center
@@ -86,7 +87,7 @@ class RepositoriesViewController: UIViewController {
         try! self.context.save()
     }
 }
-// MARK:- TableView
+// MARK: - TableView
 extension RepositoriesViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         1
@@ -139,7 +140,7 @@ extension RepositoriesViewController: UITableViewDataSource, UITableViewDelegate
         }
     }
 }
-// MARK:- SearchBar
+// MARK: - SearchBar
 extension RepositoriesViewController: UISearchBarDelegate {
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         tableView.isHidden = true

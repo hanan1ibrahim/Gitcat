@@ -56,14 +56,16 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signIn(_ sender: Any) {
-        // vibaration when sign in
+        // MARK: - vibaration when sign in
         
         let sheet = UIAlertController(title: "", message: Titles.makeSure , preferredStyle: .actionSheet)
         sheet.addAction(UIAlertAction(title: Titles.signInWithGithubTitle, style: .default, handler: {_ in
-        // call authentication method
+            // MARK: -  call authentication method
+            
             self.getGitHubAccessToken ()
         }))
-        // sheet alert between guest and authenticated member
+        // MARK: - sheet alert between guest and authenticated member
+        
         sheet.addAction(UIAlertAction(title: Titles.guestModeTitle , style: .default, handler: {_ in
             let alert = UIAlertController(title: "", message: Titles.byContinue , preferredStyle: .alert)
             alert.view.tintColor = UIColor.black
@@ -94,22 +96,22 @@ extension LoginViewController {
         webAuthenticationSession = ASWebAuthenticationSession.init(
             url: authorizeURL,
             callbackURLScheme: Constants.redirectURI) { (callBack: URL?, error: Error?) in
-            guard
-                error == nil,
-                let successURL = callBack
-            else {
-                return
+                guard
+                    error == nil,
+                    let successURL = callBack
+                else {
+                    return
+                }
+                // MARK: - Retrieve access code
+                guard let accessCode = URLComponents(string: (successURL.absoluteString))?
+                        .queryItems?.first(where: { $0.name == "code" })?.value else {
+                            return
+                        }
+                // MARK: - fetch token using access code
+                TokenManager.shared.fetchAccessToken(accessToken: accessCode) { isSuccess in
+                    self.handlesignin(success: isSuccess)
+                }
             }
-            // Retrieve access code
-            guard let accessCode = URLComponents(string: (successURL.absoluteString))?
-                    .queryItems?.first(where: { $0.name == "code" })?.value else {
-                return
-            }
-            // fetch token using access code
-            TokenManager.shared.fetchAccessToken(accessToken: accessCode) { isSuccess in
-                self.handlesignin(success: isSuccess)
-            }
-        }
         webAuthenticationSession?.presentationContextProvider = self
         webAuthenticationSession?.start()
     }

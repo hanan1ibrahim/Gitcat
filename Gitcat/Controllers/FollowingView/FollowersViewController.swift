@@ -10,11 +10,12 @@ import Alamofire
 
 class FollowersViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    //MARK:- IBOutlets
     
+// MARK: - IBOutlets
     let refreshControl = UIRefreshControl()
     @IBOutlet weak var searchLabel: UILabel!
-    //MARK:- Varibles
+
+// MARK: - Varibles
     
     let afSession: Session = {
         let interceptor = RequestIntercptor()
@@ -79,7 +80,7 @@ class FollowersViewController: UIViewController {
             })
         }
 }
-// MARK:- TableView
+// MARK: - TableView
 
 extension FollowersViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
