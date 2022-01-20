@@ -91,7 +91,7 @@ struct AccessToken: Decodable {
 | RepositoriesPage | anon & user | List Github Repositories , navigate us to safari web site.|
 | BookmarksPage    | anon & user | List users and repositories bookmarks, and the availability to delete.|
 | ProfilePage      | user only   | View user information appear on the app from GitHub.| 
-| FollowingPage    | user only   | Following list appear on the app from GitHub.|
+| Followingand followersPage    | user only   |following and followers list appear on the app from GitHub..|
 | StarredPage      | user only   |  User liked repositories stored in his github account.| 
 | ReopsitoriesPage | user only   |  User repositories private or public.|
 | Organization     |  user only  | If the user work at an organization it will appear in this place.|   
