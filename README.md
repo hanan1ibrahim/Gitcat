@@ -24,7 +24,10 @@ when we hold on the cell the app open 3 actions menu:
 
 * Bookmarks View Controller : As a user I want app to list my users and repositories bookmarks list in a one table View and the availability to delete. 
 * Profile View Controller :  
-* Following View Controller: As a user I want my following list appear on the app from GitHub.
+* Following and Followers View Controller: As as a user I want my following and followers list appear on the app from GitHub.
+* Starred View Controller : as a user I want to  find the repositories that I prefer and I can access them via the browsers.
+* Repositories View Controller : as a user I want to  find the repositories and I can access them via the browser.
+* Organization View Controller : as a user I want to  find the organization and I can access them via the browser
 * Settings View Controller : As a user I want to change the app language and change between dark or light mode.
                          1- Change Language
                          2- Dark Mode
@@ -89,6 +92,9 @@ struct AccessToken: Decodable {
 | BookmarksPage    | anon & user | List users and repositories bookmarks, and the availability to delete.|
 | ProfilePage      | user only   | View user information appear on the app from GitHub.| 
 | FollowingPage    | user only   | Following list appear on the app from GitHub.|
+| StarredPage      | user only   |  User liked repositories stored in his github account.| 
+| ReopsitoriesPage | user only   |  User repositories private or public.|
+| Organization     |  user only  | If the user work at an organization it will appear in this place.|   
 | SettingPage      | anon & user | Change the app language and change between dark or light mode.|
 
 
